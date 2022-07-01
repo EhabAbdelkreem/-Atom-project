@@ -26,5 +26,10 @@ namespace TomProject.PL
         {
 
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

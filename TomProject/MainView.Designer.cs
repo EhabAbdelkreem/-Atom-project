@@ -44,7 +44,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 278);
             this.Name = "MainView";
-            this.Text = "MainView";
+            this.Text = "0p";
             this.Load += new System.EventHandler(this.MainView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
             this.ResumeLayout(false);
