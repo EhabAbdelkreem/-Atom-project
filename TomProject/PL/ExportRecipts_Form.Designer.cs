@@ -189,35 +189,35 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(247, 77);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 21);
+            this.textBox2.Size = new System.Drawing.Size(216, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(12, 78);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 21);
+            this.textBox3.Size = new System.Drawing.Size(114, 20);
             this.textBox3.TabIndex = 1;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(12, 122);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 21);
+            this.textBox4.Size = new System.Drawing.Size(114, 20);
             this.textBox4.TabIndex = 1;
             // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(12, 160);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 21);
+            this.textBox5.Size = new System.Drawing.Size(114, 20);
             this.textBox5.TabIndex = 1;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(12, 200);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 21);
+            this.textBox6.Size = new System.Drawing.Size(114, 20);
             this.textBox6.TabIndex = 1;
             // 
             // richTextBox1
@@ -266,14 +266,14 @@
             // 
             this.textBox7.Location = new System.Drawing.Point(12, 26);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 21);
+            this.textBox7.Size = new System.Drawing.Size(114, 20);
             this.textBox7.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(586, 124);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(214, 21);
+            this.dateTimePicker1.Size = new System.Drawing.Size(214, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // gridControl1
@@ -485,6 +485,7 @@
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "ExportRecipts_Form";
             this.Text = "صفحة الصادرات";
+            this.Load += new System.EventHandler(this.ExportRecipts_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();

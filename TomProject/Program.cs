@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using TomProject.PL;
 
 namespace TomProject
 {
@@ -18,7 +19,7 @@ namespace TomProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ExportRecipts_Form());
+            Application.Run(new WalletItem_Form());
         }
     }
 }

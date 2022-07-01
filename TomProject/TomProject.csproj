@@ -68,16 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Garlic.cs" />
-    <Compile Include="Customer_form.cs">
+    <Compile Include="PL\Customer_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer_form.Designer.cs">
+    <Compile Include="PL\Customer_form.Designer.cs">
       <DependentUpon>Customer_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Transaction.cs">
+    <Compile Include="PL\Customer_Transaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer_Transaction.Designer.cs">
+    <Compile Include="PL\Customer_Transaction.Designer.cs">
       <DependentUpon>Customer_Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Customer.cs" />
@@ -92,10 +92,22 @@
     <Compile Include="Entities\Wallet.cs" />
     <Compile Include="Entities\WalletItem.cs" />
     <Compile Include="Entities\YeildRecipt.cs" />
-    <Compile Include="ExportRecipts_Form.cs">
+    <Compile Include="PL\WalletItem_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExportRecipts_Form.Designer.cs">
+    <Compile Include="PL\WalletItem_Form.Designer.cs">
+      <DependentUpon>WalletItem_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Wallets_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Wallets_Form.Designer.cs">
+      <DependentUpon>Wallets_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ExportRecipts_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ExportRecipts_Form.Designer.cs">
       <DependentUpon>ExportRecipts_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="MainView.cs">
@@ -110,15 +122,27 @@
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PL\Yield Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Yield Receipt.Designer.cs">
+      <DependentUpon>Yield Receipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Customer_form.resx">
+    <EmbeddedResource Include="PL\Customer_form.resx">
       <DependentUpon>Customer_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer_Transaction.resx">
+    <EmbeddedResource Include="PL\Customer_Transaction.resx">
       <DependentUpon>Customer_Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExportRecipts_Form.resx">
+    <EmbeddedResource Include="PL\WalletItem_Form.resx">
+      <DependentUpon>WalletItem_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Wallets_Form.resx">
+      <DependentUpon>Wallets_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ExportRecipts_Form.resx">
       <DependentUpon>ExportRecipts_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
@@ -126,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206282006280_Intial.resx">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Yield Receipt.resx">
+      <DependentUpon>Yield Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
