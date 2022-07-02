@@ -22,7 +22,7 @@ namespace TomProject
 
         void InitializeBindings()
         {
-            var fluent = mvvmContext1.OfType<MainViewModel>();
+            var fluent = mvvmContext1.OfType<MainView>();
         }
 
         private void MainView_Load(object sender, EventArgs e)

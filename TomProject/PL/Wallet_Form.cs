@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TomProject.Context;
 
 namespace TomProject
 {
-    public partial class Wallet : DevExpress.XtraEditors.XtraForm
+    public partial class Wallet_Form : DevExpress.XtraEditors.XtraForm
     {
-        public Wallet()
+        Garlic db = new Garlic();
+        public Wallet_Form()
         {
             InitializeComponent();
         }
@@ -22,9 +24,12 @@ namespace TomProject
         {
 
         }
-
+       
         private void Wallet_Load(object sender, EventArgs e)
         {
+            
+
+
 
         }
     }

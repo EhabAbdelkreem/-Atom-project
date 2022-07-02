@@ -242,8 +242,6 @@ D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProje
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.csproj.CopyComplete
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.exe
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.pdb
-D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.Yield_Receipt.resources
-D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.Wallet.resources
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\DevExpress.XtraScheduler.v22.1.Core.Desktop.dll
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\DevExpress.XtraScheduler.v22.1.Core.dll
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\DevExpress.XtraScheduler.v22.1.dll
@@ -257,5 +255,6 @@ D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\ja\DevEx
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\de\DevExpress.XtraScheduler.v22.1.Core.resources.dll
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\es\DevExpress.XtraScheduler.v22.1.Core.resources.dll
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\ja\DevExpress.XtraScheduler.v22.1.Core.resources.dll
-D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.WalletItem.resources
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.YeildReceiptcs.resources
+D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.item.resources
+D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.Wallet_Form.resources

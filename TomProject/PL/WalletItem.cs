@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace TomProject.PL
 {
-    public partial class WalletItem : DevExpress.XtraEditors.XtraForm
+    public partial class item : DevExpress.XtraEditors.XtraForm
     {
-        public WalletItem()
+        public item()
         {
             InitializeComponent();
+        }
+
+        private void WalletItem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

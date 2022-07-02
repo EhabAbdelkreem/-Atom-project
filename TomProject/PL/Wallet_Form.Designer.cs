@@ -1,6 +1,6 @@
 ﻿namespace TomProject
 {
-    partial class Wallet
+    partial class Wallet_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wallet));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Wallet_Form));
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
@@ -46,13 +46,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.LueItem = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LueItem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton3
@@ -185,7 +185,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label2.Location = new System.Drawing.Point(570, 30);
+            this.label2.Location = new System.Drawing.Point(582, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 16);
@@ -259,26 +259,27 @@
             this.dateEdit1.Size = new System.Drawing.Size(145, 20);
             this.dateEdit1.TabIndex = 57;
             // 
-            // comboBoxEdit1
+            // LueItem
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(408, 29);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.LueItem.Location = new System.Drawing.Point(408, 31);
+            this.LueItem.Name = "LueItem";
+            this.LueItem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
-            "اخضر",
-            " ناشف"});
-            this.comboBoxEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.comboBoxEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBoxEdit1.Size = new System.Drawing.Size(145, 20);
-            this.comboBoxEdit1.TabIndex = 59;
+            this.LueItem.Properties.DisplayMember = "asd";
+            this.LueItem.Properties.ShowFooter = false;
+            this.LueItem.Properties.ShowHeader = false;
+            this.LueItem.Properties.ShowLines = false;
+            this.LueItem.Properties.ValueMember = "1";
+            this.LueItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LueItem.Size = new System.Drawing.Size(145, 20);
+            this.LueItem.TabIndex = 60;
             // 
-            // Wallet
+            // Wallet_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 314);
-            this.Controls.Add(this.comboBoxEdit1);
+            this.Controls.Add(this.LueItem);
             this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.textBox1);
@@ -290,7 +291,7 @@
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
-            this.Name = "Wallet";
+            this.Name = "Wallet_Form";
             this.Text = "الخزنه";
             this.Load += new System.EventHandler(this.Wallet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -298,7 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LueItem.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,6 +324,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.LookUpEdit LueItem;
     }
 }

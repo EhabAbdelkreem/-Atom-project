@@ -113,7 +113,6 @@
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainViewModel.cs" />
     <Compile Include="Migrations\202206282006280_Intial.cs" />
     <Compile Include="Migrations\202206282006280_Intial.designer.cs">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
@@ -125,19 +124,13 @@
     <Compile Include="PL\YeildReceiptcs.Designer.cs">
       <DependentUpon>YeildReceiptcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Yield Receipt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Yield Receipt.Designer.cs">
-      <DependentUpon>Yield Receipt.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PL\Wallet.cs">
+    <Compile Include="PL\Wallet_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Wallet.Designer.cs">
-      <DependentUpon>Wallet.cs</DependentUpon>
+    <Compile Include="PL\Wallet_Form.Designer.cs">
+      <DependentUpon>Wallet_Form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PL\Customer_form.resx">
       <DependentUpon>Customer_form.cs</DependentUpon>
@@ -145,8 +138,8 @@
     <EmbeddedResource Include="PL\Customer_Transaction.resx">
       <DependentUpon>Customer_Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Wallet.resx">
-      <DependentUpon>Wallet.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Wallet_Form.resx">
+      <DependentUpon>Wallet_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\WalletItem.resx">
       <DependentUpon>WalletItem.cs</DependentUpon>
@@ -162,9 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\YeildReceiptcs.resx">
       <DependentUpon>YeildReceiptcs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Yield Receipt.resx">
-      <DependentUpon>Yield Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

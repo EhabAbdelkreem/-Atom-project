@@ -36,7 +36,7 @@
             // mvvmContext1
             // 
             this.mvvmContext1.ContainerControl = this;
-            this.mvvmContext1.ViewModelType = typeof(TomProject.MainViewModel);
+            this.mvvmContext1.ViewModelType = typeof(TomProject.MainView);
             // 
             // MainView
             // 
