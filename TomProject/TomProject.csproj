@@ -95,6 +95,24 @@
     <Compile Include="Entities\Wallet.cs" />
     <Compile Include="Entities\WalletItem.cs" />
     <Compile Include="Entities\YeildRecipt.cs" />
+    <Compile Include="PL\FilleRecipets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FilleRecipets.Designer.cs">
+      <DependentUpon>FilleRecipets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Follitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Follitem.Designer.cs">
+      <DependentUpon>Follitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\harvestRecipets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\harvestRecipets.Designer.cs">
+      <DependentUpon>harvestRecipets.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\WalletItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +155,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Customer_Transaction.resx">
       <DependentUpon>Customer_Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FilleRecipets.resx">
+      <DependentUpon>FilleRecipets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Follitem.resx">
+      <DependentUpon>Follitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\harvestRecipets.resx">
+      <DependentUpon>harvestRecipets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Wallet_Form.resx">
       <DependentUpon>Wallet_Form.cs</DependentUpon>

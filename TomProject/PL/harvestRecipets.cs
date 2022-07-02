@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TomProject
 {
-    public partial class Costomer_Form : DevExpress.XtraEditors.XtraForm
+    public partial class harvestRecipets : DevExpress.XtraEditors.XtraForm
     {
-        public Costomer_Form()
+        public harvestRecipets()
         {
             InitializeComponent();
         }
