@@ -8,14 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
-namespace TomProject
+namespace ProjectDS
 {
-    public partial class Follitem : DevExpress.XtraEditors.XtraForm
+    public partial class Fillitem : DevExpress.XtraEditors.XtraForm
     {
-        public Follitem()
+        public Fillitem()
         {
             InitializeComponent();
+           
         }
     }
 }
