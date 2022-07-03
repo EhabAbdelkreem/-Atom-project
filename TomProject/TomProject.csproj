@@ -101,11 +101,11 @@
     <Compile Include="PL\FilleRecipets.Designer.cs">
       <DependentUpon>FilleRecipets.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Follitem.cs">
+    <Compile Include="PL\Fillitem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Follitem.Designer.cs">
-      <DependentUpon>Follitem.cs</DependentUpon>
+    <Compile Include="PL\Fillitem.Designer.cs">
+      <DependentUpon>Fillitem.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\harvestRecipets.cs">
       <SubType>Form</SubType>
@@ -159,8 +159,8 @@
     <EmbeddedResource Include="PL\FilleRecipets.resx">
       <DependentUpon>FilleRecipets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Follitem.resx">
-      <DependentUpon>Follitem.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Fillitem.resx">
+      <DependentUpon>Fillitem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\harvestRecipets.resx">
       <DependentUpon>harvestRecipets.cs</DependentUpon>

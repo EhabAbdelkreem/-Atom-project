@@ -258,3 +258,22 @@ D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\bin\Debug\ja\DevEx
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.YeildReceiptcs.resources
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.PL.item.resources
 D:\ITI\12-LINQ & EF\Project\Downproject\tomproject\TomProject\obj\Debug\TomProject.Wallet_Form.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.csproj.AssemblyReference.cache
+F:\newpropject\TomProject\obj\Debug\TomProject.csproj.SuggestedBindingRedirects.cache
+F:\newpropject\TomProject\obj\Debug\TomProject.Customer_form.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.Customer_Transaction.resources
+F:\newpropject\TomProject\obj\Debug\ProjectDS.FilleRecipets.resources
+F:\newpropject\TomProject\obj\Debug\ProjectDS.Fillitem.resources
+F:\newpropject\TomProject\obj\Debug\ProjectDS.harvestRecipets.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.Wallet_Form.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.PL.item.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.ExportRecipts_Form.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.MainView.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.Migrations.Intial.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.PL.YeildReceiptcs.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.Properties.Resources.resources
+F:\newpropject\TomProject\obj\Debug\TomProject.csproj.GenerateResource.cache
+F:\newpropject\TomProject\obj\Debug\TomProject.exe.licenses
+F:\newpropject\TomProject\obj\Debug\TomProject.csproj.CoreCompileInputs.cache
+F:\newpropject\TomProject\obj\Debug\TomProject.exe
+F:\newpropject\TomProject\obj\Debug\TomProject.pdb
