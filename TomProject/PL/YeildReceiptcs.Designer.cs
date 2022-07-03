@@ -217,6 +217,7 @@
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
+            this.fluentDesignFormContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1002, 475);
             this.fluentDesignFormContainer1.TabIndex = 1;
             // 
@@ -559,6 +560,8 @@
             this.ClientSize = new System.Drawing.Size(1002, 475);
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Name = "YeildReceiptcs";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RightToLeftLayout = true;
             this.Text = "YeildReceiptcs";
             this.Load += new System.EventHandler(this.YeildReceiptcs_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);

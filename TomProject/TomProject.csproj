@@ -113,11 +113,11 @@
     <Compile Include="PL\harvestRecipets.Designer.cs">
       <DependentUpon>harvestRecipets.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\WalletItem.cs">
+    <Compile Include="PL\WalletItem_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\WalletItem.Designer.cs">
-      <DependentUpon>WalletItem.cs</DependentUpon>
+    <Compile Include="PL\WalletItem_Form.Designer.cs">
+      <DependentUpon>WalletItem_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\ExportRecipts_Form.cs">
       <SubType>Form</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="PL\Wallet_Form.resx">
       <DependentUpon>Wallet_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\WalletItem.resx">
-      <DependentUpon>WalletItem.cs</DependentUpon>
+    <EmbeddedResource Include="PL\WalletItem_Form.resx">
+      <DependentUpon>WalletItem_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\ExportRecipts_Form.resx">
       <DependentUpon>ExportRecipts_Form.cs</DependentUpon>

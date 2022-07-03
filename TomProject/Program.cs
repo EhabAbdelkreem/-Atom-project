@@ -19,7 +19,7 @@ namespace TomProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new YeildReceiptcs());
+            Application.Run(new WalletItem_Form());
         }
     }
 }
