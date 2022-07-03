@@ -9,13 +9,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TomProject
+namespace ProjectDS
 {
     public partial class harvestRecipets : DevExpress.XtraEditors.XtraForm
     {
         public harvestRecipets()
         {
             InitializeComponent();
+        }
+
+        private void XtraForm1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
