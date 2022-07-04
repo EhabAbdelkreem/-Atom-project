@@ -217,8 +217,7 @@
             this.fluentDesignFormContainer1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1002, 475);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1026, 641);
             this.fluentDesignFormContainer1.TabIndex = 1;
             // 
             // textEdit2
@@ -397,16 +396,14 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.gridControl1.Location = new System.Drawing.Point(0, 306);
+            this.gridControl1.Location = new System.Drawing.Point(0, 325);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(1008, 166);
+            this.gridControl1.Size = new System.Drawing.Size(1026, 316);
             this.gridControl1.TabIndex = 29;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -557,11 +554,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 475);
+            this.ClientSize = new System.Drawing.Size(1026, 641);
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Name = "YeildReceiptcs";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RightToLeftLayout = true;
             this.Text = "YeildReceiptcs";
             this.Load += new System.EventHandler(this.YeildReceiptcs_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);

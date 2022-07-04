@@ -99,7 +99,6 @@ namespace ProjectDS
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = typeof(garlic_DataBase.Add_fill);
             this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             gridLevelNode1.RelationName = "Level1";
             this.gridControl1.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
