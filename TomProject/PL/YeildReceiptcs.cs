@@ -137,7 +137,7 @@ namespace TomProject.PL
             }
             else
             {
-                XtraMessageBox.Show("Please Complete Data ", "Warnning", MessageBoxButtons.OK);
+                XtraMessageBox.Show("Please Complete Data ", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -164,8 +164,11 @@ namespace TomProject.PL
 
                 }
             }
+            else
+                XtraMessageBox.Show("Please Select Raw ", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             #endregion
-           
+
             #region fillGridcontrol
             gridControl1.DataSource = db.YeildRecipts.Select(r => new { r.ID, SName = r.Supplier.Name, Fdan = r.AcrePrice, r.CaratPrice, r.Paid, r.Total, r.Remaining, r.Date, r.Notes, Price = r.Price }).ToList();
             #endregion

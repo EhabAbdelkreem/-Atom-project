@@ -9,18 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TomProject.PL
+namespace ProjectDS
 {
-    public partial class item : DevExpress.XtraEditors.XtraForm
+    public partial class FilleRecipets : DevExpress.XtraEditors.XtraForm
     {
-        public item()
+        public FilleRecipets()
         {
             InitializeComponent();
-        }
-
-        private void WalletItem_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
