@@ -41,24 +41,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Type = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NumberOfUnit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,20 +58,46 @@
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit_weighttotal = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_paid = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_remaind = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_total = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textEdit_wightunit = new DevExpress.XtraEditors.TextEdit();
+            this.LueItem_name = new DevExpress.XtraEditors.LookUpEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.comboBoxEdit_typofproduct = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.comboBoxEdit_size = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEdit_numofunit = new DevExpress.XtraEditors.TextEdit();
+            this.textBox_fillquantity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_weighttotal.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_paid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_remaind.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_total.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_wightunit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LueItem_name.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_typofproduct.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_size.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_numofunit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(830, 26);
+            this.label2.Location = new System.Drawing.Point(739, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 0;
@@ -89,7 +107,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(850, 127);
+            this.label3.Location = new System.Drawing.Point(759, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 19);
             this.label3.TabIndex = 0;
@@ -99,7 +118,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(522, 31);
+            this.label4.Location = new System.Drawing.Point(440, 43);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 19);
             this.label4.TabIndex = 0;
@@ -109,7 +129,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(487, 83);
+            this.label5.Location = new System.Drawing.Point(110, 115);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 0;
@@ -119,17 +140,19 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(833, 83);
+            this.label6.Location = new System.Drawing.Point(413, 77);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 19);
+            this.label6.Size = new System.Drawing.Size(70, 19);
             this.label6.TabIndex = 0;
-            this.label6.Text = "نوع التعبئه";
+            this.label6.Text = "كمية التعبئه";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(154, 28);
+            this.label7.Location = new System.Drawing.Point(112, 38);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 19);
             this.label7.TabIndex = 0;
@@ -139,17 +162,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(152, 124);
+            this.label8.Location = new System.Drawing.Point(314, 167);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 19);
+            this.label8.Size = new System.Drawing.Size(53, 19);
             this.label8.TabIndex = 0;
-            this.label8.Text = "السعر الكلى";
+            this.label8.Text = "الاجمالى";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(150, 77);
+            this.label9.Location = new System.Drawing.Point(110, 77);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 19);
             this.label9.TabIndex = 0;
@@ -159,7 +184,8 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(138, 165);
+            this.label10.Location = new System.Drawing.Point(148, 167);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 19);
             this.label10.TabIndex = 0;
@@ -169,7 +195,8 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(175, 206);
+            this.label11.Location = new System.Drawing.Point(44, 167);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 19);
             this.label11.TabIndex = 0;
@@ -179,110 +206,43 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(498, 135);
+            this.label12.Location = new System.Drawing.Point(741, 188);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 19);
             this.label12.TabIndex = 0;
             this.label12.Text = "الملاحظات";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(247, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(12, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(12, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 20);
-            this.textBox4.TabIndex = 1;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(12, 160);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 20);
-            this.textBox5.TabIndex = 1;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(12, 200);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 20);
-            this.textBox6.TabIndex = 1;
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(247, 135);
+            this.richTextBox1.Location = new System.Drawing.Point(502, 189);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(216, 86);
+            this.richTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox1.Size = new System.Drawing.Size(214, 45);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "اخضر",
-            "ناشف"});
-            this.comboBox1.Location = new System.Drawing.Point(586, 29);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "3",
-            "4",
-            "5"});
-            this.comboBox2.Location = new System.Drawing.Point(247, 32);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(214, 21);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "شبك",
-            "قفص"});
-            this.comboBox3.Location = new System.Drawing.Point(584, 81);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(216, 21);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(12, 26);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 20);
-            this.textBox7.TabIndex = 1;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(586, 124);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(502, 125);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(214, 20);
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker1.Size = new System.Drawing.Size(214, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // gridControl1
             // 
-            this.gridControl1.Location = new System.Drawing.Point(5, 270);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 304);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.gridControl1.Size = new System.Drawing.Size(891, 287);
+            this.gridControl1.Size = new System.Drawing.Size(819, 190);
             this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -300,19 +260,22 @@
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
+            this.Type,
             this.gridColumn3,
             this.gridColumn4,
-            this.gridColumn5,
+            this.NumberOfUnit,
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn13});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // gridColumn1
             // 
@@ -320,7 +283,7 @@
             this.gridColumn1.FieldName = "ID";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.VisibleIndex = 1;
             // 
             // gridColumn2
             // 
@@ -328,7 +291,16 @@
             this.gridColumn2.FieldName = "Date";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 2;
+            this.gridColumn2.Width = 74;
+            // 
+            // Type
+            // 
+            this.Type.Caption = "نوع المنتج";
+            this.Type.FieldName = "Type";
+            this.Type.Name = "Type";
+            this.Type.Visible = true;
+            this.Type.VisibleIndex = 3;
             // 
             // gridColumn3
             // 
@@ -336,7 +308,8 @@
             this.gridColumn3.FieldName = "FillQuantity";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.Width = 112;
             // 
             // gridColumn4
             // 
@@ -344,15 +317,17 @@
             this.gridColumn4.FieldName = "Size";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.Width = 74;
             // 
-            // gridColumn5
+            // NumberOfUnit
             // 
-            this.gridColumn5.Caption = "عدد الوحدات";
-            this.gridColumn5.FieldName = "NumberOfunit";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.NumberOfUnit.Caption = "عدد الوحدات";
+            this.NumberOfUnit.FieldName = "NumberOfUnit";
+            this.NumberOfUnit.Name = "NumberOfUnit";
+            this.NumberOfUnit.Visible = true;
+            this.NumberOfUnit.VisibleIndex = 6;
+            this.NumberOfUnit.Width = 74;
             // 
             // gridColumn6
             // 
@@ -360,7 +335,8 @@
             this.gridColumn6.FieldName = "UnitWeight";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.Width = 74;
             // 
             // gridColumn7
             // 
@@ -368,7 +344,8 @@
             this.gridColumn7.FieldName = "TotalWeight";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.Width = 74;
             // 
             // gridColumn8
             // 
@@ -376,7 +353,8 @@
             this.gridColumn8.FieldName = "Price";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 74;
             // 
             // gridColumn9
             // 
@@ -384,7 +362,8 @@
             this.gridColumn9.FieldName = "Total";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.VisibleIndex = 10;
+            this.gridColumn9.Width = 74;
             // 
             // gridColumn10
             // 
@@ -392,7 +371,8 @@
             this.gridColumn10.FieldName = "Paid";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.VisibleIndex = 11;
+            this.gridColumn10.Width = 74;
             // 
             // gridColumn11
             // 
@@ -400,7 +380,8 @@
             this.gridColumn11.FieldName = "Remaining";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 10;
+            this.gridColumn11.VisibleIndex = 12;
+            this.gridColumn11.Width = 74;
             // 
             // gridColumn12
             // 
@@ -408,40 +389,16 @@
             this.gridColumn12.FieldName = "Notes";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 11;
+            this.gridColumn12.VisibleIndex = 13;
+            this.gridColumn12.Width = 74;
             // 
-            // button1
+            // gridColumn13
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Location = new System.Drawing.Point(634, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "اضافه";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Location = new System.Drawing.Point(482, 231);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 33);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "تعديل";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(332, 231);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 33);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "عرض الكل";
-            this.button3.UseVisualStyleBackColor = true;
+            this.gridColumn13.Caption = "الاسم";
+            this.gridColumn13.FieldName = "Name";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 0;
             // 
             // barAndDockingController1
             // 
@@ -449,46 +406,289 @@
             this.barAndDockingController1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.barAndDockingController1.PropertiesBar.AllowLinkLighting = false;
             // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Appearance.Options.UseForeColor = true;
+            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
+            this.simpleButton3.Location = new System.Drawing.Point(237, 253);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(130, 43);
+            this.simpleButton3.TabIndex = 13;
+            this.simpleButton3.Text = "حزف البيانات";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Appearance.Options.UseForeColor = true;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(414, 253);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(124, 43);
+            this.simpleButton2.TabIndex = 14;
+            this.simpleButton2.Text = "تعديل البيانات";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Appearance.Options.UseForeColor = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(598, 253);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(134, 43);
+            this.simpleButton1.TabIndex = 15;
+            this.simpleButton1.Text = "حفظ البيانات";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // textEdit_weighttotal
+            // 
+            this.textEdit_weighttotal.Location = new System.Drawing.Point(9, 75);
+            this.textEdit_weighttotal.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_weighttotal.Name = "textEdit_weighttotal";
+            this.textEdit_weighttotal.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_weighttotal.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_weighttotal.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_weighttotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_weighttotal.Size = new System.Drawing.Size(75, 20);
+            this.textEdit_weighttotal.TabIndex = 16;
+            // 
+            // textEdit_paid
+            // 
+            this.textEdit_paid.EditValue = "0";
+            this.textEdit_paid.Location = new System.Drawing.Point(152, 199);
+            this.textEdit_paid.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_paid.Name = "textEdit_paid";
+            this.textEdit_paid.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_paid.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_paid.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_paid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_paid.Size = new System.Drawing.Size(90, 20);
+            this.textEdit_paid.TabIndex = 16;
+            this.textEdit_paid.TextChanged += new System.EventHandler(this.textEdit_paid_TextChanged);
+            // 
+            // textEdit_remaind
+            // 
+            this.textEdit_remaind.EditValue = "0";
+            this.textEdit_remaind.Location = new System.Drawing.Point(22, 199);
+            this.textEdit_remaind.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_remaind.Name = "textEdit_remaind";
+            this.textEdit_remaind.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_remaind.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_remaind.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_remaind.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_remaind.Size = new System.Drawing.Size(85, 20);
+            this.textEdit_remaind.TabIndex = 16;
+            // 
+            // textEdit_total
+            // 
+            this.textEdit_total.EditValue = "0";
+            this.textEdit_total.Location = new System.Drawing.Point(276, 199);
+            this.textEdit_total.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_total.Name = "textEdit_total";
+            this.textEdit_total.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_total.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_total.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_total.Properties.NullValuePrompt = "0";
+            this.textEdit_total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_total.Size = new System.Drawing.Size(102, 20);
+            this.textEdit_total.TabIndex = 16;
+            this.textEdit_total.TextChanged += new System.EventHandler(this.textEdit_total_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(739, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "اسم العميل";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(412, 119);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 19);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "سعر الوحده";
+            // 
+            // textEdit_wightunit
+            // 
+            this.textEdit_wightunit.Location = new System.Drawing.Point(11, 39);
+            this.textEdit_wightunit.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_wightunit.Name = "textEdit_wightunit";
+            this.textEdit_wightunit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_wightunit.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_wightunit.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_wightunit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_wightunit.Size = new System.Drawing.Size(75, 20);
+            this.textEdit_wightunit.TabIndex = 16;
+            // 
+            // LueItem_name
+            // 
+            this.LueItem_name.Location = new System.Drawing.Point(502, 44);
+            this.LueItem_name.Name = "LueItem_name";
+            this.LueItem_name.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LueItem_name.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name3", "اخضر ")});
+            this.LueItem_name.Properties.NullText = "";
+            this.LueItem_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LueItem_name.Size = new System.Drawing.Size(214, 20);
+            this.LueItem_name.TabIndex = 17;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(205, 116);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit1.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit1.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit1.Size = new System.Drawing.Size(201, 20);
+            this.textEdit1.TabIndex = 16;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            // 
+            // simpleButton4
+            // 
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.Appearance.Options.UseForeColor = true;
+            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
+            this.simpleButton4.Location = new System.Drawing.Point(63, 253);
+            this.simpleButton4.Name = "simpleButton4";
+            this.simpleButton4.Size = new System.Drawing.Size(126, 44);
+            this.simpleButton4.TabIndex = 18;
+            this.simpleButton4.Text = "طباعة بيانات";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            // 
+            // comboBoxEdit_typofproduct
+            // 
+            this.comboBoxEdit_typofproduct.Location = new System.Drawing.Point(502, 78);
+            this.comboBoxEdit_typofproduct.Name = "comboBoxEdit_typofproduct";
+            this.comboBoxEdit_typofproduct.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit_typofproduct.Properties.Items.AddRange(new object[] {
+            "اخضر ",
+            "ناشف"});
+            this.comboBoxEdit_typofproduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxEdit_typofproduct.Size = new System.Drawing.Size(214, 20);
+            this.comboBoxEdit_typofproduct.TabIndex = 19;
+            // 
+            // comboBoxEdit_size
+            // 
+            this.comboBoxEdit_size.Location = new System.Drawing.Point(205, 41);
+            this.comboBoxEdit_size.Name = "comboBoxEdit_size";
+            this.comboBoxEdit_size.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit_size.Properties.Items.AddRange(new object[] {
+            "3",
+            "4",
+            "5"});
+            this.comboBoxEdit_size.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboBoxEdit_size.Size = new System.Drawing.Size(201, 20);
+            this.comboBoxEdit_size.TabIndex = 19;
+            // 
+            // textEdit_numofunit
+            // 
+            this.textEdit_numofunit.Location = new System.Drawing.Point(9, 114);
+            this.textEdit_numofunit.Margin = new System.Windows.Forms.Padding(2);
+            this.textEdit_numofunit.Name = "textEdit_numofunit";
+            this.textEdit_numofunit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit_numofunit.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.textEdit_numofunit.Properties.MaskSettings.Set("mask", "f");
+            this.textEdit_numofunit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_numofunit.Size = new System.Drawing.Size(75, 20);
+            this.textEdit_numofunit.TabIndex = 16;
+            // 
+            // textBox_fillquantity
+            // 
+            this.textBox_fillquantity.Location = new System.Drawing.Point(205, 81);
+            this.textBox_fillquantity.Name = "textBox_fillquantity";
+            this.textBox_fillquantity.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBox_fillquantity.Size = new System.Drawing.Size(201, 21);
+            this.textBox_fillquantity.TabIndex = 20;
+            // 
             // ExportRecipts_Form
             // 
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Appearance.Options.UseBackColor = true;
+            this.Appearance.Options.UseFont = true;
+            this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 556);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(819, 494);
+            this.Controls.Add(this.textBox_fillquantity);
+            this.Controls.Add(this.comboBoxEdit_size);
+            this.Controls.Add(this.comboBoxEdit_typofproduct);
+            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.LueItem_name);
+            this.Controls.Add(this.textEdit_total);
+            this.Controls.Add(this.textEdit_remaind);
+            this.Controls.Add(this.textEdit_numofunit);
+            this.Controls.Add(this.textEdit_paid);
+            this.Controls.Add(this.textEdit_weighttotal);
+            this.Controls.Add(this.textEdit_wightunit);
+            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("ExportRecipts_Form.IconOptions.Image")));
-            this.LookAndFeel.SkinName = "Office 2016 Dark";
+            this.LookAndFeel.SkinName = "Office 2016 Colorful";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ExportRecipts_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "صفحة الصادرات";
             this.Load += new System.EventHandler(this.ExportRecipts_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_weighttotal.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_paid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_remaind.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_total.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_wightunit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LueItem_name.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_typofproduct.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit_size.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_numofunit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,28 +706,15 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn NumberOfUnit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
@@ -535,5 +722,25 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit textEdit_weighttotal;
+        private DevExpress.XtraEditors.TextEdit textEdit_paid;
+        private DevExpress.XtraEditors.TextEdit textEdit_remaind;
+        private DevExpress.XtraEditors.TextEdit textEdit_total;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.TextEdit textEdit_wightunit;
+        private DevExpress.XtraEditors.LookUpEdit LueItem_name;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit_typofproduct;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit_size;
+        private DevExpress.XtraEditors.TextEdit textEdit_numofunit;
+        private System.Windows.Forms.TextBox textBox_fillquantity;
+        private DevExpress.XtraGrid.Columns.GridColumn Type;
     }
 }
