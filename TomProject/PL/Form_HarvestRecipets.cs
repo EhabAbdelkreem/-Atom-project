@@ -84,25 +84,30 @@ namespace TomProject
             t3bafil();
         }
 
+
+
         private void gridControl1_Click(object sender, EventArgs e)
         {
-            G = new Garlic();
-
-            txtid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
-            lookUpEdit1.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
-            cmbquantity.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2].FieldName).ToString();
-            date.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
-            cmb.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
-            lookUpEdit2.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]).ToString();
-            txtquantity.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]).ToString();
-            txtnumberofunit.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[7]).ToString();
-            txtunitweight.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[8]).ToString();
-            txttotalweight.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[9]).ToString();
-            txtpeice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[10]).ToString();
-            txttotalprice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[11]).ToString();
-            txtpaid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[12]).ToString();
-            txtrest.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[13]).ToString();
-            txtnoat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[14]).ToString();
+         
+            if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]) != null)
+            {
+                txtid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
+                lookUpEdit1.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
+                cmbquantity.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2].FieldName).ToString();
+                date.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
+                cmb.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
+                lookUpEdit2.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[5]).ToString();
+                txtquantity.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[6]).ToString();
+                txtnumberofunit.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[7]).ToString();
+                txtunitweight.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[8]).ToString();
+                txttotalweight.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[9]).ToString();
+                txtpeice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[10]).ToString();
+                txttotalprice.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[11]).ToString();
+                txtpaid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[12]).ToString();
+                txtrest.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[13]).ToString();
+                txtnoat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[14]).ToString();
+            
+            }
             
 
         }
@@ -117,39 +122,47 @@ namespace TomProject
                 var supplierID =  int.Parse(lookUpEdit1.EditValue.ToString()) ;
                 var fillID = int.Parse(lookUpEdit2.EditValue.ToString());
                 var fillitemInfac = G.FillItems.Where(ww => ww.ID == fillID).Select(ww => new {ww.ID, ww.Name, ww.Quantity }).FirstOrDefault();
-                var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new {ww.ID, ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
-                harvestedRecipet HR = new harvestedRecipet();
-                HR.Supplier = G.Suppliers.FirstOrDefault(ww => ww.ID == supplierID);
-                HR.Date = DateTime.Parse(date.Text);
-                HR.FillQuantity = int.Parse(txtquantity.Text);
-                HR.FillItem = G.FillItems.FirstOrDefault(ee=>ee.ID==fillID);
-                HR.Notes = txtnoat.Text;
-                HR.NumberOfUnit = int.Parse(txtnumberofunit.Text);
-                HR.Paid = int.Parse(txtpaid.Text);
-                HR.Price = int.Parse(txtpeice.Text);
-                HR.Remaining = int.Parse(txtrest.Text);
-                HR.Total = int.Parse(txttotalprice.Text);
-                HR.UnitWeight = int.Parse(txtunitweight.Text);
-                HR.TotalWeight = int.Parse(txttotalweight.Text);
-                HR.Type = cmbquantity.Text;
-                HR.Size = int.Parse(cmb.Text);
-                G.harvestedRecipets.Add(HR);
-                totalfil =fillitemInfac.Quantity- int.Parse(txtquantity.Text);
-                acount = suplier.account + int.Parse(txtrest.Text);
-                Supplier s = new Supplier { ID = suplier.ID, Name = suplier.Name, Type = suplier.Type, Phone = suplier.Phone, Address = suplier.Address, account = acount, Notes = suplier.Notes };
-                FillItem FI = new FillItem { ID = fillitemInfac.ID, Name = fillitemInfac.Name, Quantity = totalfil };
-                Garlic GG = new Garlic();
-                Garlic GGG = new Garlic();
-                GG.Entry(s).State = System.Data.Entity.EntityState.Modified;
-                GGG.Entry(FI).State = System.Data.Entity.EntityState.Modified;
-                G.SaveChanges();
-                GG.SaveChanges();
-                GGG.SaveChanges();
+                if (fillitemInfac.Quantity >= int.Parse(txtquantity.Text))
+                {
+                    var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new { ww.ID, ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
+                    harvestedRecipet HR = new harvestedRecipet();
+                    HR.Supplier = G.Suppliers.FirstOrDefault(ww => ww.ID == supplierID);
+                    HR.Date = DateTime.Parse(date.Text);
+                    HR.FillQuantity = int.Parse(txtquantity.Text);
+                    HR.FillItem = G.FillItems.FirstOrDefault(ee => ee.ID == fillID);
+                    HR.Notes = txtnoat.Text;
+                    HR.NumberOfUnit = int.Parse(txtnumberofunit.Text);
+                    HR.Paid = int.Parse(txtpaid.Text);
+                    HR.Price = int.Parse(txtpeice.Text);
+                    HR.Remaining = int.Parse(txtrest.Text);
+                    HR.Total = int.Parse(txttotalprice.Text);
+                    HR.UnitWeight = int.Parse(txtunitweight.Text);
+                    HR.TotalWeight = int.Parse(txttotalweight.Text);
+                    HR.Type = cmbquantity.Text;
+                    HR.Size = int.Parse(cmb.Text);
+                    G.harvestedRecipets.Add(HR);
+                    totalfil = fillitemInfac.Quantity - int.Parse(txtquantity.Text);
+                    acount = suplier.account + int.Parse(txtrest.Text);
+                    Supplier s = new Supplier { ID = suplier.ID, Name = suplier.Name, Type = suplier.Type, Phone = suplier.Phone, Address = suplier.Address, account = acount, Notes = suplier.Notes };
+                    FillItem FI = new FillItem { ID = fillitemInfac.ID, Name = fillitemInfac.Name, Quantity = totalfil };
+                    Garlic GG = new Garlic();
+                    Garlic GGG = new Garlic();
+                    GG.Entry(s).State = System.Data.Entity.EntityState.Modified;
+                    GGG.Entry(FI).State = System.Data.Entity.EntityState.Modified;
+                    G.SaveChanges();
+                    GG.SaveChanges();
+                    GGG.SaveChanges();
 
-                MessageBox.Show("تم ادخال بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("تم ادخال بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                gridfillview();
-                clearFields();
+                    gridfillview();
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Fill Quantity is less than ordered", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
             }
             else
             {
@@ -162,24 +175,26 @@ namespace TomProject
             G = new Garlic();
             if (txtnoat.Text != "" && txtnumberofunit.Text != "" && txtpaid.Text != "" && txtpeice.Text != "" && txtquantity.Text != "" && txtrest.Text != "" && txttotalprice.Text != "" && txttotalweight.Text != "" && txtunitweight.Text != "")
             {
-                int oldquantity=0;
+                int oldquantity = 0;
                 decimal oldremain = 0;
                 int totalfil = 0;
                 decimal acount = 0;
-                var supplierID =int.Parse(lookUpEdit1.EditValue.ToString()) ;
-                var fillID = int.Parse(lookUpEdit2.EditValue.ToString()) ;
-                var harvestid =  int.Parse(txtid.Text) ;
+                var supplierID = int.Parse(lookUpEdit1.EditValue.ToString());
+                var fillID = int.Parse(lookUpEdit2.EditValue.ToString());
+                var harvestid = int.Parse(txtid.Text);
                 var fillitemInfac = G.FillItems.Where(ww => ww.ID == fillID).Select(ww => new { ww.Name, ww.Quantity }).FirstOrDefault();
-                var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new { ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
+                if (fillitemInfac.Quantity >= int.Parse(txtquantity.Text))
+                {
+                    var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new { ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
                 var harvest = G.harvestedRecipets.Where(ww => ww.ID == harvestid).Select(ww => new { ww.Date, ww.FillItem, ww.FillQuantity, ww.Notes, ww.NumberOfUnit, ww.Paid, ww.Price, ww.Remaining, ww.Size, ww.Supplier, ww.Total, ww.TotalWeight, ww.Type, ww.UnitWeight }).FirstOrDefault();
-                oldremain =decimal.Parse(harvest.Remaining.ToString());
+                oldremain = decimal.Parse(harvest.Remaining.ToString());
                 oldquantity = harvest.FillQuantity;
                 harvestedRecipet HR = new harvestedRecipet();
                 HR.ID = harvestid;
-                HR.Supplier = G.Suppliers.FirstOrDefault(ww=>ww.ID==supplierID);
+                HR.Supplier = G.Suppliers.FirstOrDefault(ww => ww.ID == supplierID);
                 HR.Date = DateTime.Parse(date.Text);
                 HR.FillQuantity = int.Parse(txtquantity.Text);
-                HR.FillItem = G.FillItems.FirstOrDefault(ww => ww.ID==fillID);
+                HR.FillItem = G.FillItems.FirstOrDefault(ww => ww.ID == fillID);
                 HR.Notes = txtnoat.Text;
                 HR.NumberOfUnit = int.Parse(txtnumberofunit.Text);
                 HR.Paid = decimal.Parse(txtpaid.Text);
@@ -192,10 +207,10 @@ namespace TomProject
                 HR.Size = int.Parse(cmb.Text);
 
                 totalfil = (fillitemInfac.Quantity + oldquantity) - int.Parse(txtquantity.Text);
-                acount = (suplier.account-oldremain) + decimal.Parse(txtrest.Text);
+                acount = (suplier.account - oldremain) + decimal.Parse(txtrest.Text);
                 Supplier s = new Supplier { ID = supplierID, Name = suplier.Name, Type = suplier.Type, Phone = suplier.Phone, Address = suplier.Address, account = acount, Notes = suplier.Notes };
                 FillItem FI = new FillItem { ID = fillID, Name = fillitemInfac.Name, Quantity = totalfil };
-          
+
                 Garlic GG = new Garlic();
                 Garlic GGG = new Garlic();
                 GG.Entry(s).State = System.Data.Entity.EntityState.Modified;
@@ -209,6 +224,12 @@ namespace TomProject
                 gridfillview();
                 clearFields();
             }
+            else
+            {
+                MessageBox.Show("Fill Quantity is less than ordered", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
             else
             {
                 MessageBox.Show("يرجى اختيار الحقل", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -249,7 +270,7 @@ namespace TomProject
                 HR.Type = cmbquantity.Text;
                 HR.Size = int.Parse(cmb.Text);
 
-                totalfil = fillitemInfac.Quantity + oldquantity ;
+                totalfil = fillitemInfac.Quantity + oldquantity;
                 acount = supplierID.account - oldremain;
                 Supplier s = new Supplier { ID = supplierID.ID, Name = suplier.Name, Type = suplier.Type, Phone = suplier.Phone, Address = suplier.Address, account = acount, Notes = suplier.Notes };
                 FillItem FI = new FillItem { ID = fillID.ID, Name = fillitemInfac.Name, Quantity = totalfil };
@@ -280,6 +301,15 @@ namespace TomProject
             }
         }
 
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            gridControl1.ShowPrintPreview();
+
+        }
+
+
+
+
         private void txtrest_EditValueChanged(object sender, EventArgs e)
         {
 
@@ -289,10 +319,5 @@ namespace TomProject
         {
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            gridControl1.ShowPrintPreview();
-
-        }
     }
 }

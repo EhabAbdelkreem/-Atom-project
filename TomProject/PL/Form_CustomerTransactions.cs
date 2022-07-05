@@ -13,83 +13,99 @@ using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
 
-
 namespace TomProject.PL
 {
-    public partial class FormSupplierTransactions : DevExpress.XtraEditors.XtraForm
+    public partial class Form_CustomerTransactions : DevExpress.XtraEditors.XtraForm
     {
         Garlic db = new Garlic();
 
-        public FormSupplierTransactions()
+        public Form_CustomerTransactions()
         {
             InitializeComponent();
         }
+        #region Fillgrid
+        private void fillgrid()
+        {
 
+            gridControl1.DataSource =
+            db.CustomerTransactions.Select(r => new
+            { r.ID, SName = r.Customer.Name, r.Date, r.Notes, r.TransactionType, r.Amount, c = r.Customer.account }).ToList();
+        }
+        #endregion
 
-        #region formLoad
-        private void FormSupplierTransactions_Load_1(object sender, EventArgs e)
+        #region FormLoad
+        private void Form_CustomerTransactions_Load(object sender, EventArgs e)
         {
             #region Supplierlookupedit
-            var supplier = db.Suppliers.Select(ee => new { ID = ee.ID, Name = ee.Name }).ToList();
-            LueItem.EditValue = db.Suppliers.Select(a => a.ID).FirstOrDefault();//to select first elment in form load
-            LueItem.Properties.DataSource = supplier;
+            var Customer = db.Customers.Select(ee => new { ID = ee.ID, Name = ee.Name }).ToList();
+            LueItem.EditValue = db.Customers.Select(a => a.ID).FirstOrDefault();//to select first elment in form load
+            LueItem.Properties.DataSource = Customer;
             LueItem.Properties.DisplayMember = "Name";
             LueItem.Properties.ValueMember = "ID";
             ///hide ID From lookupedit
             LueItem.Properties.PopulateColumns();
             LueItem.Properties.Columns[0].Visible = false;
             //for supplier account
-            var supplieracc = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
-            txtAccount.Text = supplieracc.account.ToString();
+            var Customeracc = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
+            txtAccount.Text = Customeracc.account.ToString();
             #endregion
 
 
             #region gridControl1
-            gridControl1.DataSource =
-            db.SupplierTransactions.Select(r => new
-            { r.ID, SName = r.Supplier.Name, r.Date, r.Notes, r.TransactionType, r.Amount , c = r.Supplier.account }).ToList();
+            fillgrid();
             #endregion
 
         }
         #endregion
 
+        #region RsestControlls
+        private void emptyControls()
+        {
+            txtnotes.Text = "";
+            txtDate.Text = "";
+            txtType.Text = "";
+            txtamount.Text = "0";
+            var Customeracc = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
+            txtAccount.Text = Customeracc.account.ToString();
+
+        }
+        #endregion
+
+        #region Insert
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
             if (!(txtamount.Text == "" || txtType.Text == "" || LueItem.Text == "" || txtType.Text == ""))
             {
                 #region create object of reciept
-                var newreceipt = new SupplierTransaction();
-                newreceipt.Date = Convert.ToDateTime( txtDate.Text) ;
+                var newreceipt = new CustomerTransaction();
+                newreceipt.Date = Convert.ToDateTime(txtDate.Text);
                 newreceipt.Notes = txtnotes.Text;
                 newreceipt.Amount = (decimal)float.Parse(txtamount.Text); ;
                 newreceipt.TransactionType = txtType.Text;
-                
 
 
-                newreceipt.Supplier = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
+
+                newreceipt.Customer = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
                 #endregion
                 #region Supplieraccount
 
                 if (txtType.Text == "تحصيل")
                 {
-                    newreceipt.Supplier.account += decimal.Parse(txtamount.Text);
+                    newreceipt.Customer.account += decimal.Parse(txtamount.Text);
                 }
                 else
                 {
-                    newreceipt.Supplier.account -= decimal.Parse(txtamount.Text);
+                    newreceipt.Customer.account -= decimal.Parse(txtamount.Text);
 
                 }
 
                 #endregion
 
                 #region add to Database and show gridview
-
-                db.SupplierTransactions.Add(newreceipt);
+                db.CustomerTransactions.Add(newreceipt);
                 db.SaveChanges();
-                gridControl1.DataSource =
-               db.SupplierTransactions.Select(r => new
-               { r.ID, SName = r.Supplier.Name, r.Date, r.Notes, r.Amount, c = r.Supplier.account, r.TransactionType }).ToList();
+                fillgrid();
                 #endregion
                 emptyControls();
                 XtraMessageBox.Show("Added Succuessfuly ", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,21 +116,10 @@ namespace TomProject.PL
                 XtraMessageBox.Show("Please Complete Data ", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-
-        }
-
-        #region RsestControlls
-        private void emptyControls()
-        {
-            txtnotes.Text = "";
-            txtDate.Text = "";
-            txtType.Text = "";
-            txtamount.Text = "0";
-            var supplieracc = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
-            txtAccount.Text = supplieracc.account.ToString();
-
         }
         #endregion
+
+        #region GridView
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SName") != null)
@@ -134,21 +139,24 @@ namespace TomProject.PL
 
         }
 
+        #endregion
+
+        #region Update
         private void simpleButton3_Click(object sender, EventArgs e)
         {
             if (!(txtamount.Text == "" || txtType.Text == ""
-                 || txtnotes.Text == "" || LueItem.Text == "" || txtType.Text == ""))
+                || txtnotes.Text == "" || LueItem.Text == "" || txtType.Text == ""))
             {
 
 
                 #region create object of reciept
-                var newreceipt = new SupplierTransaction();
+                var newreceipt = new CustomerTransaction();
                 newreceipt.Date = Convert.ToDateTime(txtDate.Text);
                 newreceipt.Notes = txtnotes.Text;
                 newreceipt.Amount = (decimal)float.Parse(txtamount.Text);
 
                 newreceipt.TransactionType = txtType.Text;
-                newreceipt.Supplier = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
+                newreceipt.Customer = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
 
                 #endregion
                 int id = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID");
@@ -161,37 +169,36 @@ namespace TomProject.PL
                 decimal old_Money = (decimal)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Amount");
                 if (txtType.Text == "تحصيل")
                 {
-                    if(txtType.Text==old_trans)
+                    if (txtType.Text == old_trans)
                     {
-                        newreceipt.Supplier.account += newreceipt.Amount - old_Money;
+                        newreceipt.Customer.account += newreceipt.Amount - old_Money;
 
                     }
                     else
                     {
-                        newreceipt.Supplier.account +=( newreceipt.Amount + old_Money);
+                        newreceipt.Customer.account += (newreceipt.Amount + old_Money);
                     }
                 }
                 else
                 {
                     if (txtType.Text == old_trans)
                     {
-                        newreceipt.Supplier.account += newreceipt.Amount - old_Money;
+                        newreceipt.Customer.account += newreceipt.Amount - old_Money;
                     }
                     else
                     {
-                        newreceipt.Supplier.account -= (newreceipt.Amount + old_Money);
+                        newreceipt.Customer.account -= (newreceipt.Amount + old_Money);
                     }
 
                 }
                 #endregion
-                db.SupplierTransactions.AddOrUpdate(newreceipt);
+                db.CustomerTransactions.AddOrUpdate(newreceipt);
                 db.SaveChanges();
 
                 #endregion
-                #region fillGridcontrol
-                gridControl1.DataSource =
-                  db.SupplierTransactions.Select(r => new
-                 { r.ID, SName = r.Supplier.Name, r.Date, r.Notes, r.Amount, c = r.Supplier.account, r.TransactionType }).ToList();
+                #region 
+                fillgrid();
+
                 #endregion
                 XtraMessageBox.Show("Updated Succuessfuly ", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -203,6 +210,9 @@ namespace TomProject.PL
             }
         }
 
+        #endregion
+
+        #region Delete
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             #region delete record
@@ -210,7 +220,7 @@ namespace TomProject.PL
             {
                 int id = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID");
 
-                var receipt = db.SupplierTransactions.Where(w => w.ID == id).Include(ee => ee.Supplier).FirstOrDefault();
+                var receipt = db.CustomerTransactions.Where(w => w.ID == id).Include(ee => ee.Customer).FirstOrDefault();
                 if (XtraMessageBox.Show($"Do you want to delete Receipt number {id}?", "Confirmation", MessageBoxButtons.YesNo) != DialogResult.No)
                 {
                     #region Supplieraccount
@@ -218,14 +228,14 @@ namespace TomProject.PL
                     decimal old_Money = (decimal)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Amount");
                     if (old_trans == "تحصيل")
                     {
-                        receipt.Supplier.account -= old_Money;
+                        receipt.Customer.account -= old_Money;
                     }
                     else
                     {
-                        receipt.Supplier.account += old_Money;
+                        receipt.Customer.account += old_Money;
                     }
                     #endregion
-                    db.SupplierTransactions.Remove(receipt);
+                    db.CustomerTransactions.Remove(receipt);
                     db.SaveChanges();
                     XtraMessageBox.Show("Removed Succuessfuly ", "Successed", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -234,25 +244,24 @@ namespace TomProject.PL
             #endregion
 
             #region fillGridcontrol
-            gridControl1.DataSource =
-                      db.SupplierTransactions.Select(r => new
-                      { r.ID, SName = r.Supplier.Name, r.Date, r.Notes, r.TransactionType, r.Amount, c = r.Supplier.account }).ToList();
+            fillgrid();
             #endregion
             emptyControls();
         }
+        #endregion
 
-   
-
+        #region Print
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             gridControl1.ShowPrintPreview();
 
         }
+        #endregion
 
         private void LueItem_EditValueChanged(object sender, EventArgs e)
         {
-            var supplier = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
-            txtAccount.Text= supplier.account.ToString();
+            var Customer = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
+            txtAccount.Text = Customer.account.ToString();
         }
     }
 }

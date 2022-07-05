@@ -375,7 +375,6 @@ F:\newpropject\TomProject\obj\Debug\TomProject.csproj.CopyComplete
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.csproj.AssemblyReference.cache
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.csproj.SuggestedBindingRedirects.cache
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.main_form.resources
-F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.Customer_Transaction.resources
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.PL.FormSupplierTransactions.resources
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.Form_RawRecipets.resources
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.PL.Form_Supplier.resources
@@ -489,3 +488,5 @@ F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.PL.Form_YeildReceiptc
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.csproj.CopyComplete
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.Migrations.Add_Users.resources
 F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.Form_Customer.resources
+F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.PL.Form_CustomerTransactions.resources
+F:\FinalProject\tomproject\TomProject\obj\Debug\TomProject.PL.Form_ExportReceipts.resources

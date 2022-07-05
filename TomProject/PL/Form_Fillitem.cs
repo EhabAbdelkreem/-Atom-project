@@ -49,7 +49,7 @@ namespace TomProject
 
                 g.FillItems.Add(fill);
                 g.SaveChanges();
-                MessageBox.Show("تم ادخال البيانات بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Added Succuessfuly ", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
                 gridfillview();
             }
