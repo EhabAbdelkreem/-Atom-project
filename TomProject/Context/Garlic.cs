@@ -27,6 +27,7 @@ namespace TomProject.Context
         public virtual DbSet<WalletItem> WalletItems { get; set; }
         public virtual DbSet<YeildRecipt> YeildRecipts { get; set; }
 
+        public virtual DbSet<User> Users { get; set; }
 
     }
 }

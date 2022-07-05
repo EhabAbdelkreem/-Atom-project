@@ -46,7 +46,7 @@ namespace TomProject.PL
         private void simpleButton7_Click(object sender, EventArgs e)
         {
             if (!(TxtName.Text == "" || Txtaddress.Text == "" || combType.Text == ""
-           || Txtphone.Text == "" || Txtnotes.Text == ""))
+           || Txtphone.Text == "" ))
             {
                 #region create object of reciept
                 var newreceipt = new Supplier();
@@ -93,7 +93,7 @@ namespace TomProject.PL
         {
             #region
             if (!(TxtName.Text == "" || Txtaddress.Text == "" || combType.Text == ""
-        || Txtphone.Text == "" || Txtnotes.Text == ""))
+        || Txtphone.Text == ""))
             {
 
 
