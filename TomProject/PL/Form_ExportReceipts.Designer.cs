@@ -1,7 +1,6 @@
-﻿
-namespace TomProject
+﻿namespace TomProject.PL
 {
-    partial class Form_HarvestRecipets
+    partial class Form_ExportReceipts
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +28,12 @@ namespace TomProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_HarvestRecipets));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ExportReceipts));
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtid = new DevExpress.XtraEditors.TextEdit();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.date = new DevExpress.XtraEditors.DateEdit();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
@@ -46,43 +50,93 @@ namespace TomProject
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtquantity = new DevExpress.XtraEditors.TextEdit();
+            this.txtrest = new DevExpress.XtraEditors.TextEdit();
             this.txtpaid = new DevExpress.XtraEditors.TextEdit();
             this.txttotalprice = new DevExpress.XtraEditors.TextEdit();
             this.txtpeice = new DevExpress.XtraEditors.TextEdit();
             this.txttotalweight = new DevExpress.XtraEditors.TextEdit();
-            this.txtunitweight = new DevExpress.XtraEditors.TextEdit();
+            this.cmb = new DevExpress.XtraEditors.TextEdit();
             this.txtnumberofunit = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.date = new DevExpress.XtraEditors.DateEdit();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
-            this.txtid = new DevExpress.XtraEditors.TextEdit();
-            this.cmb = new DevExpress.XtraEditors.TextEdit();
-            this.txtrest = new DevExpress.XtraEditors.TextEdit();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtunitweight = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbquantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtquantity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrest.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpaid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotalprice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpeice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotalweight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtunitweight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnumberofunit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtrest.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnumberofunit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunitweight.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Silver;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(746, 332);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.simpleButton1.Size = new System.Drawing.Size(146, 41);
+            this.simpleButton1.TabIndex = 123;
+            this.simpleButton1.Text = "طباعه الفواتير";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(449, 7);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(15, 20);
+            this.txtid.TabIndex = 122;
+            this.txtid.Visible = false;
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(131, 7);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Size = new System.Drawing.Size(333, 20);
+            this.lookUpEdit1.TabIndex = 121;
+            // 
+            // lookUpEdit2
+            // 
+            this.lookUpEdit2.Location = new System.Drawing.Point(130, 189);
+            this.lookUpEdit2.Name = "lookUpEdit2";
+            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit2.Size = new System.Drawing.Size(333, 20);
+            this.lookUpEdit2.TabIndex = 120;
+            // 
+            // date
+            // 
+            this.date.EditValue = null;
+            this.date.Location = new System.Drawing.Point(131, 102);
+            this.date.Name = "date";
+            this.date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.date.Size = new System.Drawing.Size(332, 20);
+            this.date.TabIndex = 119;
             // 
             // simpleButton3
             // 
@@ -95,11 +149,11 @@ namespace TomProject
             this.simpleButton3.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.simpleButton3.AppearancePressed.Options.UseBackColor = true;
             this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(557, 338);
+            this.simpleButton3.Location = new System.Drawing.Point(557, 332);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(146, 41);
-            this.simpleButton3.TabIndex = 70;
+            this.simpleButton3.TabIndex = 103;
             this.simpleButton3.Text = "حذف البيانات";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
@@ -114,11 +168,11 @@ namespace TomProject
             this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(353, 338);
+            this.simpleButton2.Location = new System.Drawing.Point(353, 332);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(146, 41);
-            this.simpleButton2.TabIndex = 69;
+            this.simpleButton2.TabIndex = 102;
             this.simpleButton2.Text = "تعديل البيانات";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -133,11 +187,11 @@ namespace TomProject
             this.simpleButton4.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.simpleButton4.AppearancePressed.Options.UseBackColor = true;
             this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(154, 338);
+            this.simpleButton4.Location = new System.Drawing.Point(154, 332);
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(146, 41);
-            this.simpleButton4.TabIndex = 68;
+            this.simpleButton4.TabIndex = 101;
             this.simpleButton4.Text = "حفظ البيانات";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
@@ -150,10 +204,9 @@ namespace TomProject
             this.gridControl1.Margin = new System.Windows.Forms.Padding(4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1028, 243);
-            this.gridControl1.TabIndex = 85;
+            this.gridControl1.TabIndex = 118;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -172,21 +225,22 @@ namespace TomProject
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsPrint.PrintPreview = true;
             this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // txtnoat
             // 
-            this.txtnoat.Location = new System.Drawing.Point(131, 241);
+            this.txtnoat.Location = new System.Drawing.Point(131, 235);
             this.txtnoat.Margin = new System.Windows.Forms.Padding(4);
             this.txtnoat.Multiline = true;
             this.txtnoat.Name = "txtnoat";
             this.txtnoat.Size = new System.Drawing.Size(332, 82);
-            this.txtnoat.TabIndex = 67;
+            this.txtnoat.TabIndex = 100;
             // 
             // cmbquantity
             // 
             this.cmbquantity.AllowDrop = true;
             this.cmbquantity.EditValue = "اخضر";
-            this.cmbquantity.Location = new System.Drawing.Point(131, 58);
+            this.cmbquantity.Location = new System.Drawing.Point(131, 52);
             this.cmbquantity.Margin = new System.Windows.Forms.Padding(4);
             this.cmbquantity.Name = "cmbquantity";
             this.cmbquantity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -196,99 +250,99 @@ namespace TomProject
             "ناشف"});
             this.cmbquantity.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cmbquantity.Size = new System.Drawing.Size(333, 20);
-            this.cmbquantity.TabIndex = 55;
+            this.cmbquantity.TabIndex = 90;
             // 
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(17, 273);
+            this.labelControl14.Location = new System.Drawing.Point(17, 267);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(54, 16);
-            this.labelControl14.TabIndex = 83;
+            this.labelControl14.TabIndex = 116;
             this.labelControl14.Text = "ملاحظات";
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(877, 277);
+            this.labelControl7.Location = new System.Drawing.Point(877, 271);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(48, 16);
-            this.labelControl7.TabIndex = 82;
+            this.labelControl7.TabIndex = 115;
             this.labelControl7.Text = "المتبقى";
             // 
             // labelControl13
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(715, 277);
+            this.labelControl13.Location = new System.Drawing.Point(715, 271);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(47, 16);
-            this.labelControl13.TabIndex = 84;
+            this.labelControl13.TabIndex = 117;
             this.labelControl13.Text = "المدفوع";
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(550, 14);
+            this.labelControl6.Location = new System.Drawing.Point(550, 8);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(74, 16);
-            this.labelControl6.TabIndex = 80;
+            this.labelControl6.TabIndex = 113;
             this.labelControl6.Text = "كمية التعبئة";
             // 
             // labelControl12
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(512, 276);
+            this.labelControl12.Location = new System.Drawing.Point(512, 270);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(54, 16);
-            this.labelControl12.TabIndex = 79;
+            this.labelControl12.TabIndex = 112;
             this.labelControl12.Text = "الاحمالى";
             // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(17, 196);
+            this.labelControl5.Location = new System.Drawing.Point(17, 190);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(64, 16);
-            this.labelControl5.TabIndex = 78;
+            this.labelControl5.TabIndex = 111;
             this.labelControl5.Text = "نوع التعبئة";
             // 
             // labelControl11
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(550, 221);
+            this.labelControl11.Location = new System.Drawing.Point(550, 215);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(38, 16);
-            this.labelControl11.TabIndex = 71;
+            this.labelControl11.TabIndex = 104;
             this.labelControl11.Text = "السعر";
             // 
             // labelControl4
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(17, 151);
+            this.labelControl4.Location = new System.Drawing.Point(17, 145);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(38, 16);
-            this.labelControl4.TabIndex = 76;
+            this.labelControl4.TabIndex = 109;
             this.labelControl4.Text = "الحجم";
             // 
             // txtquantity
             // 
-            this.txtquantity.Location = new System.Drawing.Point(677, 13);
+            this.txtquantity.Location = new System.Drawing.Point(677, 7);
             this.txtquantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtquantity.Name = "txtquantity";
             this.txtquantity.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
@@ -296,212 +350,156 @@ namespace TomProject
             this.txtquantity.Properties.MaskSettings.Set("hideInsignificantZeros", null);
             this.txtquantity.Properties.MaskSettings.Set("valueAfterDelete", DevExpress.Data.Mask.NumericMaskManager.ValueAfterDelete.ZeroThenNull);
             this.txtquantity.Size = new System.Drawing.Size(333, 20);
-            this.txtquantity.TabIndex = 59;
+            this.txtquantity.TabIndex = 91;
+            // 
+            // txtrest
+            // 
+            this.txtrest.Location = new System.Drawing.Point(937, 270);
+            this.txtrest.Margin = new System.Windows.Forms.Padding(4);
+            this.txtrest.Name = "txtrest";
+            this.txtrest.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtrest.Properties.MaskSettings.Set("mask", "f");
+            this.txtrest.Size = new System.Drawing.Size(73, 20);
+            this.txtrest.TabIndex = 99;
             // 
             // txtpaid
             // 
-            this.txtpaid.Location = new System.Drawing.Point(781, 276);
+            this.txtpaid.Location = new System.Drawing.Point(781, 270);
             this.txtpaid.Margin = new System.Windows.Forms.Padding(4);
             this.txtpaid.Name = "txtpaid";
             this.txtpaid.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtpaid.Properties.MaskSettings.Set("mask", "f");
             this.txtpaid.Size = new System.Drawing.Size(73, 20);
-            this.txtpaid.TabIndex = 65;
+            this.txtpaid.TabIndex = 98;
             // 
             // txttotalprice
             // 
-            this.txttotalprice.Location = new System.Drawing.Point(600, 276);
+            this.txttotalprice.Location = new System.Drawing.Point(600, 270);
             this.txttotalprice.Margin = new System.Windows.Forms.Padding(4);
             this.txttotalprice.Name = "txttotalprice";
             this.txttotalprice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txttotalprice.Properties.MaskSettings.Set("mask", "f");
             this.txttotalprice.Size = new System.Drawing.Size(78, 20);
-            this.txttotalprice.TabIndex = 64;
+            this.txttotalprice.TabIndex = 97;
             // 
             // txtpeice
             // 
-            this.txtpeice.Location = new System.Drawing.Point(677, 220);
+            this.txtpeice.Location = new System.Drawing.Point(677, 214);
             this.txtpeice.Margin = new System.Windows.Forms.Padding(4);
             this.txtpeice.Name = "txtpeice";
             this.txtpeice.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtpeice.Properties.MaskSettings.Set("mask", "f");
             this.txtpeice.Size = new System.Drawing.Size(333, 20);
-            this.txtpeice.TabIndex = 63;
+            this.txtpeice.TabIndex = 96;
             // 
             // txttotalweight
             // 
-            this.txttotalweight.Location = new System.Drawing.Point(677, 168);
+            this.txttotalweight.Location = new System.Drawing.Point(677, 162);
             this.txttotalweight.Margin = new System.Windows.Forms.Padding(4);
             this.txttotalweight.Name = "txttotalweight";
             this.txttotalweight.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txttotalweight.Properties.MaskSettings.Set("mask", "f");
             this.txttotalweight.Size = new System.Drawing.Size(333, 20);
-            this.txttotalweight.TabIndex = 62;
+            this.txttotalweight.TabIndex = 95;
             // 
-            // txtunitweight
+            // cmb
             // 
-            this.txtunitweight.Location = new System.Drawing.Point(677, 116);
-            this.txtunitweight.Margin = new System.Windows.Forms.Padding(4);
-            this.txtunitweight.Name = "txtunitweight";
-            this.txtunitweight.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtunitweight.Properties.MaskSettings.Set("mask", "f");
-            this.txtunitweight.Size = new System.Drawing.Size(333, 20);
-            this.txtunitweight.TabIndex = 61;
+            this.cmb.Location = new System.Drawing.Point(131, 144);
+            this.cmb.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb.Name = "cmb";
+            this.cmb.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.cmb.Properties.MaskSettings.Set("mask", "d");
+            this.cmb.Size = new System.Drawing.Size(333, 20);
+            this.cmb.TabIndex = 92;
             // 
             // txtnumberofunit
             // 
-            this.txtnumberofunit.Location = new System.Drawing.Point(677, 65);
+            this.txtnumberofunit.Location = new System.Drawing.Point(677, 59);
             this.txtnumberofunit.Margin = new System.Windows.Forms.Padding(4);
             this.txtnumberofunit.Name = "txtnumberofunit";
             this.txtnumberofunit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtnumberofunit.Properties.MaskSettings.Set("mask", "d");
             this.txtnumberofunit.Size = new System.Drawing.Size(333, 20);
-            this.txtnumberofunit.TabIndex = 60;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(550, 169);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(80, 16);
-            this.labelControl10.TabIndex = 75;
-            this.labelControl10.Text = "اجمالى الوزن";
+            this.txtnumberofunit.TabIndex = 93;
             // 
             // labelControl9
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(550, 118);
+            this.labelControl9.Location = new System.Drawing.Point(550, 112);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(67, 16);
-            this.labelControl9.TabIndex = 74;
+            this.labelControl9.TabIndex = 107;
             this.labelControl9.Text = "وزن الوحده";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(17, 109);
+            this.labelControl3.Location = new System.Drawing.Point(17, 103);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(37, 16);
-            this.labelControl3.TabIndex = 73;
+            this.labelControl3.TabIndex = 106;
             this.labelControl3.Text = "التاريخ";
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(550, 66);
+            this.labelControl8.Location = new System.Drawing.Point(550, 60);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(75, 16);
-            this.labelControl8.TabIndex = 72;
+            this.labelControl8.TabIndex = 105;
             this.labelControl8.Text = "عدد الوحدات";
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(17, 60);
+            this.labelControl2.Location = new System.Drawing.Point(17, 54);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 16);
-            this.labelControl2.TabIndex = 77;
+            this.labelControl2.TabIndex = 110;
             this.labelControl2.Text = "نوع التوريد";
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(17, 14);
+            this.labelControl1.Location = new System.Drawing.Point(17, 8);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(69, 16);
-            this.labelControl1.TabIndex = 81;
+            this.labelControl1.TabIndex = 114;
             this.labelControl1.Text = "اسم المورد";
             // 
-            // date
+            // txtunitweight
             // 
-            this.date.EditValue = null;
-            this.date.Location = new System.Drawing.Point(131, 108);
-            this.date.Name = "date";
-            this.date.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.date.Size = new System.Drawing.Size(332, 20);
-            this.date.TabIndex = 86;
+            this.txtunitweight.Location = new System.Drawing.Point(677, 110);
+            this.txtunitweight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtunitweight.Name = "txtunitweight";
+            this.txtunitweight.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtunitweight.Properties.MaskSettings.Set("mask", "f");
+            this.txtunitweight.Size = new System.Drawing.Size(333, 20);
+            this.txtunitweight.TabIndex = 94;
             // 
-            // lookUpEdit2
+            // labelControl10
             // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(130, 195);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Size = new System.Drawing.Size(333, 20);
-            this.lookUpEdit2.TabIndex = 87;
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(550, 163);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(80, 16);
+            this.labelControl10.TabIndex = 108;
+            this.labelControl10.Text = "اجمالى الوزن";
             // 
-            // txtid
+            // Form_ExportReceipts
             // 
-            this.txtid.Location = new System.Drawing.Point(449, 13);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(15, 20);
-            this.txtid.TabIndex = 88;
-            this.txtid.Visible = false;
-            // 
-            // cmb
-            // 
-            this.cmb.Location = new System.Drawing.Point(131, 150);
-            this.cmb.Margin = new System.Windows.Forms.Padding(4);
-            this.cmb.Name = "cmb";
-            this.cmb.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.cmb.Properties.MaskSettings.Set("mask", "d");
-            this.cmb.Size = new System.Drawing.Size(333, 20);
-            this.cmb.TabIndex = 60;
-            // 
-            // txtrest
-            // 
-            this.txtrest.Location = new System.Drawing.Point(937, 276);
-            this.txtrest.Margin = new System.Windows.Forms.Padding(4);
-            this.txtrest.Name = "txtrest";
-            this.txtrest.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtrest.Properties.MaskSettings.Set("mask", "f");
-            this.txtrest.Size = new System.Drawing.Size(73, 20);
-            this.txtrest.TabIndex = 65;
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(131, 13);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(333, 20);
-            this.lookUpEdit1.TabIndex = 87;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Silver;
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(746, 338);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.simpleButton1.Size = new System.Drawing.Size(146, 41);
-            this.simpleButton1.TabIndex = 89;
-            this.simpleButton1.Text = "طباعه الفواتير";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // Form_HarvestRecipets
-            // 
-            this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 630);
@@ -530,38 +528,37 @@ namespace TomProject
             this.Controls.Add(this.txttotalprice);
             this.Controls.Add(this.txtpeice);
             this.Controls.Add(this.txttotalweight);
-            this.Controls.Add(this.txtunitweight);
             this.Controls.Add(this.cmb);
             this.Controls.Add(this.txtnumberofunit);
-            this.Controls.Add(this.labelControl10);
             this.Controls.Add(this.labelControl9);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.Name = "Form_HarvestRecipets";
+            this.Controls.Add(this.txtunitweight);
+            this.Controls.Add(this.labelControl10);
+            this.Name = "Form_ExportReceipts";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "فاتورة توريد توم مقصوص";
-            this.Load += new System.EventHandler(this.formharvestRecipets_Load);
+            this.Text = "الصادرات";
+            this.Load += new System.EventHandler(this.Form_ExportReceipts_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbquantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtquantity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtrest.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpaid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotalprice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtpeice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttotalweight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtunitweight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnumberofunit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.date.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtrest.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtnumberofunit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtunitweight.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,6 +566,11 @@ namespace TomProject
 
         #endregion
 
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit txtid;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
+        private DevExpress.XtraEditors.DateEdit date;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
@@ -585,24 +587,19 @@ namespace TomProject
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtquantity;
+        private DevExpress.XtraEditors.TextEdit txtrest;
         private DevExpress.XtraEditors.TextEdit txtpaid;
         private DevExpress.XtraEditors.TextEdit txttotalprice;
         private DevExpress.XtraEditors.TextEdit txtpeice;
         private DevExpress.XtraEditors.TextEdit txttotalweight;
-        private DevExpress.XtraEditors.TextEdit txtunitweight;
+        private DevExpress.XtraEditors.TextEdit cmb;
         private DevExpress.XtraEditors.TextEdit txtnumberofunit;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit date;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit2;
-        private DevExpress.XtraEditors.TextEdit txtid;
-        private DevExpress.XtraEditors.TextEdit cmb;
-        private DevExpress.XtraEditors.TextEdit txtrest;
-        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.TextEdit txtunitweight;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
     }
 }

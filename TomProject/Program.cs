@@ -19,7 +19,7 @@ namespace TomProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSupplierTransactions());
+            Application.Run(new Form_ExportReceipts());
         }
     }
 }

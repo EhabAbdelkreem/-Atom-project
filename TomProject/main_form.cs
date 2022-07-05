@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TomProject.PL;
 
 namespace TomProject
 {
@@ -26,7 +27,7 @@ namespace TomProject
 
         private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Customer_Transaction xx = new Customer_Transaction();
+            Form_CustomerTransactions xx = new Form_CustomerTransactions();
             xx.ShowDialog(this);
         }
 
