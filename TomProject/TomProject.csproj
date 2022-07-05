@@ -71,17 +71,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Garlic.cs" />
-    <Compile Include="PL\Customer_form.cs">
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="main_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Customer_form.Designer.cs">
-      <DependentUpon>Customer_form.cs</DependentUpon>
+    <Compile Include="main_form.designer.cs">
+      <DependentUpon>main_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Customer_Transaction.cs">
+    <Compile Include="Migrations\202207042303125_Add_Users.cs" />
+    <Compile Include="Migrations\202207042303125_Add_Users.designer.cs">
+      <DependentUpon>202207042303125_Add_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\3Form_Customer_Transaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Customer_Transaction.Designer.cs">
-      <DependentUpon>Customer_Transaction.cs</DependentUpon>
+    <Compile Include="PL\3Form_Customer_Transaction.Designer.cs">
+      <DependentUpon>3Form_Customer_Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\CustomerTransaction.cs" />
@@ -95,17 +100,35 @@
     <Compile Include="Entities\Wallet.cs" />
     <Compile Include="Entities\WalletItem.cs" />
     <Compile Include="Entities\YeildRecipt.cs" />
-    <Compile Include="PL\FilleRecipets.cs">
+    <Compile Include="PL\Form_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\FilleRecipets.Designer.cs">
-      <DependentUpon>FilleRecipets.cs</DependentUpon>
+    <Compile Include="PL\Form_Customer.designer.cs">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Fillitem.cs">
+    <Compile Include="PL\Form_FilleRecipets.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Fillitem.Designer.cs">
-      <DependentUpon>Fillitem.cs</DependentUpon>
+    <Compile Include="PL\Form_FilleRecipets.Designer.cs">
+      <DependentUpon>Form_FilleRecipets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_Fillitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_Fillitem.Designer.cs">
+      <DependentUpon>Form_Fillitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_HarvestRecipets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_HarvestRecipets.Designer.cs">
+      <DependentUpon>Form_HarvestRecipets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form_SupplierTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form_SupplierTransactions.Designer.cs">
+      <DependentUpon>Form_SupplierTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Form_RawRecipets.cs">
       <SubType>Form</SubType>
@@ -113,84 +136,87 @@
     <Compile Include="PL\Form_RawRecipets.Designer.cs">
       <DependentUpon>Form_RawRecipets.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\harvestRecipets.cs">
+    <Compile Include="PL\Form_Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\harvestRecipets.Designer.cs">
-      <DependentUpon>harvestRecipets.cs</DependentUpon>
+    <Compile Include="PL\Form_Supplier.Designer.cs">
+      <DependentUpon>Form_Supplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\WalletItem_Form.cs">
+    <Compile Include="PL\Form_WalletItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\WalletItem_Form.Designer.cs">
-      <DependentUpon>WalletItem_Form.cs</DependentUpon>
+    <Compile Include="PL\Form_WalletItem.Designer.cs">
+      <DependentUpon>Form_WalletItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\ExportRecipts_Form.cs">
+    <Compile Include="PL\2Form_ExportRecipts_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\ExportRecipts_Form.Designer.cs">
-      <DependentUpon>ExportRecipts_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainView.Designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <Compile Include="PL\2Form_ExportRecipts_Form.Designer.cs">
+      <DependentUpon>2Form_ExportRecipts_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202206282006280_Intial.cs" />
     <Compile Include="Migrations\202206282006280_Intial.designer.cs">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PL\YeildReceiptcs.cs">
+    <Compile Include="PL\Form_YeildReceiptcs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\YeildReceiptcs.Designer.cs">
-      <DependentUpon>YeildReceiptcs.cs</DependentUpon>
+    <Compile Include="PL\Form_YeildReceiptcs.Designer.cs">
+      <DependentUpon>Form_YeildReceiptcs.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PL\Wallet_Form.cs">
+    <Compile Include="PL\Form_Wallet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Wallet_Form.Designer.cs">
-      <DependentUpon>Wallet_Form.cs</DependentUpon>
+    <Compile Include="PL\Form_Wallet.Designer.cs">
+      <DependentUpon>Form_Wallet.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PL\Customer_form.resx">
-      <DependentUpon>Customer_form.cs</DependentUpon>
+    <EmbeddedResource Include="main_form.resx">
+      <DependentUpon>main_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Customer_Transaction.resx">
-      <DependentUpon>Customer_Transaction.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202207042303125_Add_Users.resx">
+      <DependentUpon>202207042303125_Add_Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\FilleRecipets.resx">
-      <DependentUpon>FilleRecipets.cs</DependentUpon>
+    <EmbeddedResource Include="PL\3Form_Customer_Transaction.resx">
+      <DependentUpon>3Form_Customer_Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Fillitem.resx">
-      <DependentUpon>Fillitem.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Form_Customer.resx">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_FilleRecipets.resx">
+      <DependentUpon>Form_FilleRecipets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Fillitem.resx">
+      <DependentUpon>Form_Fillitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_HarvestRecipets.resx">
+      <DependentUpon>Form_HarvestRecipets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_SupplierTransactions.resx">
+      <DependentUpon>Form_SupplierTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Form_RawRecipets.resx">
       <DependentUpon>Form_RawRecipets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\harvestRecipets.resx">
-      <DependentUpon>harvestRecipets.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Form_Supplier.resx">
+      <DependentUpon>Form_Supplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Wallet_Form.resx">
-      <DependentUpon>Wallet_Form.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Form_Wallet.resx">
+      <DependentUpon>Form_Wallet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\WalletItem_Form.resx">
-      <DependentUpon>WalletItem_Form.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Form_WalletItem.resx">
+      <DependentUpon>Form_WalletItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\ExportRecipts_Form.resx">
-      <DependentUpon>ExportRecipts_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainView.resx">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <EmbeddedResource Include="PL\2Form_ExportRecipts_Form.resx">
+      <DependentUpon>2Form_ExportRecipts_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206282006280_Intial.resx">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\YeildReceiptcs.resx">
-      <DependentUpon>YeildReceiptcs.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Form_YeildReceiptcs.resx">
+      <DependentUpon>Form_YeildReceiptcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
