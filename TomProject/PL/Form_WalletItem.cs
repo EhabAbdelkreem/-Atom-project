@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -100,7 +101,7 @@ namespace TomProject.PL
 
                 #region update object
             
-                db.Entry(NewiTEM).State = System.Data.Entity.EntityState.Modified;
+                db.WalletItems.AddOrUpdate(NewiTEM);
                 db.SaveChanges();
 
                 #endregion

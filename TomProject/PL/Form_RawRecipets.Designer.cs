@@ -632,7 +632,7 @@
             this.Name = "Form_RawRecipets";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "Form_RawRecipets";
+            this.Text = "فاتوره وارد ارض";
             this.Load += new System.EventHandler(this.Form_RawRecipets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

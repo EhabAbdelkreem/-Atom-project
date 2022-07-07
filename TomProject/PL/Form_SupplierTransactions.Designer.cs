@@ -305,6 +305,7 @@
             this.LueItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LueItem.Size = new System.Drawing.Size(284, 20);
             this.LueItem.TabIndex = 84;
+            this.LueItem.EditValueChanged += new System.EventHandler(this.LueItem_EditValueChanged);
             // 
             // txtType
             // 

@@ -47,11 +47,11 @@ namespace TomProject.PL
             txtid.Text = "";
             txtnoat.Text = "";
             txtnumberofunit.Text = "";
-            txtpaid.Text = "";
+            txtpaid.Text = "0";
             txtpeice.Text = "";
             txtquantity.Text = "";
-            txtrest.Text = "";
-            txttotalprice.Text = "";
+            txtrest.Text = "0";
+            txttotalprice.Text = "0";
             txttotalweight.Text = "";
             txtunitweight.Text = "";
             cmb.Text = "";
@@ -95,7 +95,7 @@ namespace TomProject.PL
             if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]) != null)
             {
                 txtid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
-                lookUpEdit1.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
+                lookUpEdit1.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
                 cmbquantity.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2].FieldName).ToString();
                 date.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
                 cmb.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
@@ -143,7 +143,7 @@ namespace TomProject.PL
                     HR.Size = int.Parse(cmb.Text);
                     G.ExportRecipets.Add(HR);
                     totalfil = fillitemInfac.Quantity - int.Parse(txtquantity.Text);
-                    acount = Customer.account + decimal.Parse(txtrest.Text);
+                    acount = (Customer.account - decimal.Parse(txtrest.Text));
                     Customer s = new Customer { ID = Customer.ID, Name = Customer.Name, Phone = Customer.Phone, Address = Customer.Address, account = acount, Notes = Customer.Notes };
                     FillItem FI = new FillItem { ID = fillitemInfac.ID, Name = fillitemInfac.Name, Quantity = totalfil };
                     G.Customers.AddOrUpdate(s);
@@ -181,12 +181,14 @@ namespace TomProject.PL
                 var fillID = int.Parse(lookUpEdit2.EditValue.ToString());
                 var harvestid = int.Parse(txtid.Text);
                 var fillitemInfac = G.FillItems.Where(ww => ww.ID == fillID).Select(ww => new { ww.Name, ww.Quantity }).FirstOrDefault();
-                if (fillitemInfac.Quantity >= int.Parse(txtquantity.Text))
+                var Customer = G.Customers.Where(ww => ww.ID == CustomerID).Select(ww => new { ww.Name, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
+                var harvest = G.ExportRecipets.Where(ww => ww.ID == harvestid).Select(ww => new { ww.Date, ww.FillItem, ww.FillQuantity, ww.Notes, ww.NumberOfUnit, ww.Paid, ww.Price, ww.Remaining, ww.Size, ww.Customer, ww.Total, ww.TotalWeight, ww.Type, ww.UnitWeight }).FirstOrDefault();
+                oldremain = decimal.Parse(harvest.Remaining.ToString());
+                oldquantity = harvest.FillQuantity;
+
+                if ((fillitemInfac.Quantity+ oldquantity) >= int.Parse(txtquantity.Text))
                 {
-                    var Customer = G.Customers.Where(ww => ww.ID == CustomerID).Select(ww => new { ww.Name, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
-                    var harvest = G.ExportRecipets.Where(ww => ww.ID == harvestid).Select(ww => new { ww.Date, ww.FillItem, ww.FillQuantity, ww.Notes, ww.NumberOfUnit, ww.Paid, ww.Price, ww.Remaining, ww.Size, ww.Customer, ww.Total, ww.TotalWeight, ww.Type, ww.UnitWeight }).FirstOrDefault();
-                    oldremain = decimal.Parse(harvest.Remaining.ToString());
-                    oldquantity = harvest.FillQuantity;
+                    
                     ExportRecipet HR = new ExportRecipet();
                     HR.ID = harvestid;
                     HR.Customer = G.Customers.FirstOrDefault(ww => ww.ID == CustomerID);
@@ -205,7 +207,7 @@ namespace TomProject.PL
                     HR.Size = int.Parse(cmb.Text);
 
                     totalfil = (fillitemInfac.Quantity + oldquantity) - int.Parse(txtquantity.Text);
-                    acount = (Customer.account - oldremain) + decimal.Parse(txtrest.Text);
+                    acount =  ( oldremain - decimal.Parse(txtrest.Text))- acount ;
                     Customer s = new Customer { ID = CustomerID, Name = Customer.Name, Phone = Customer.Phone, Address = Customer.Address, account = acount, Notes = Customer.Notes };
                     FillItem FI = new FillItem { ID = fillID, Name = fillitemInfac.Name, Quantity = totalfil };
 
@@ -214,7 +216,7 @@ namespace TomProject.PL
                     G.FillItems.AddOrUpdate(FI);
                     G.SaveChanges();
 
-                    MessageBox.Show("Added Succuessfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Updated Succuessfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     gridfillview();
                     clearFields();
@@ -265,6 +267,18 @@ namespace TomProject.PL
             }
             else
                 XtraMessageBox.Show("Please Select Raw ", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void txttotalprice_TextChanged(object sender, EventArgs e)
+        {
+            txtrest.Text = (decimal.Parse(txttotalprice.Text) - decimal.Parse(txtpaid.Text)).ToString();
+
+        }
+
+        private void txtpaid_TextChanged(object sender, EventArgs e)
+        {
+            txtrest.Text = (decimal.Parse(txttotalprice.Text) - decimal.Parse(txtpaid.Text)).ToString();
 
         }
     }

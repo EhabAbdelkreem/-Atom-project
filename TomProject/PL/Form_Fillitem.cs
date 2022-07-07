@@ -56,7 +56,7 @@ namespace TomProject
             }
             else
             {
-                MessageBox.Show("يرجى ادخال كافة الحقول", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Complete Data", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 
@@ -85,14 +85,14 @@ namespace TomProject
                 g.Entry(fill).State = System.Data.Entity.EntityState.Modified;
 
                 g.SaveChanges();
-                MessageBox.Show("تم تعديل البيانات بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Update Successfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
                 gridfillview();
 
             }
             else
             {
-                MessageBox.Show("يرجى اختيار الحقل لتعديله", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Select Row", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }
@@ -120,10 +120,10 @@ namespace TomProject
                     fill.Quantity = int.Parse(txtquantity.Text);
                     g.Entry(fill).State = System.Data.Entity.EntityState.Deleted;
                     
-                    if(MessageBox.Show("يرجى التاكد من حذف البيانات", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)==DialogResult.OK)
+                    if(MessageBox.Show("Are You Sure to DElete Row", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)==DialogResult.OK)
                     {
                         g.SaveChanges();
-                        MessageBox.Show("تم حذف البيانات بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Deleted Succuessfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clear();
                         gridfillview();
 
@@ -137,13 +137,13 @@ namespace TomProject
                 }
                 else
                 {
-                    MessageBox.Show("يرجى اختيار الحقل لحذفه", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please Slecet Row", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
             }
             catch
             {
-                MessageBox.Show("يرجى حذف جميع العنصر المرتبطه بهه التعبئة فى السجلات الاخرى اولا", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Sorry Can't Delete Becaue Some Other Data Are Related With this Row", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
         }

@@ -42,9 +42,7 @@ namespace TomProject.PL
             ///hide ID From lookupedit
             LueItem.Properties.PopulateColumns();
             LueItem.Properties.Columns[0].Visible = false;
-            //for supplier account
-            var supplieracc = db.Suppliers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
-            txtAccount.Text = supplieracc.account.ToString();
+    
             #endregion
 
 

@@ -206,7 +206,7 @@
             this.Name = "WalletItem";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "WalletItem";
+            this.Text = "اداره الخزنه";
             this.Load += new System.EventHandler(this.WalletItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

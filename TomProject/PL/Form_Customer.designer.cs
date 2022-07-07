@@ -39,19 +39,19 @@
             this.notes_richtext = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit_name = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_address = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.textEdit_mobile = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit_name = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_name.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_address.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_mobile.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_name.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -138,7 +138,7 @@
             // 
             // notes_richtext
             // 
-            this.notes_richtext.Location = new System.Drawing.Point(50, 111);
+            this.notes_richtext.Location = new System.Drawing.Point(560, 108);
             this.notes_richtext.Name = "notes_richtext";
             this.notes_richtext.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.notes_richtext.Size = new System.Drawing.Size(219, 67);
@@ -150,7 +150,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(295, 131);
+            this.label5.Location = new System.Drawing.Point(460, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 16);
             this.label5.TabIndex = 0;
@@ -161,33 +161,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(316, 40);
+            this.label3.Location = new System.Drawing.Point(460, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "العنوان";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(705, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "رقم الموبيل";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(705, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "الاسم";
             // 
             // simpleButton1
             // 
@@ -199,7 +177,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(495, 201);
+            this.simpleButton1.Location = new System.Drawing.Point(121, 199);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(144, 43);
             this.simpleButton1.TabIndex = 5;
@@ -222,17 +200,9 @@
             this.simpleButton2.Text = "تعديل البيانات";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
-            // textEdit_name
-            // 
-            this.textEdit_name.Location = new System.Drawing.Point(455, 39);
-            this.textEdit_name.Name = "textEdit_name";
-            this.textEdit_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit_name.Size = new System.Drawing.Size(219, 20);
-            this.textEdit_name.TabIndex = 6;
-            // 
             // textEdit_address
             // 
-            this.textEdit_address.Location = new System.Drawing.Point(50, 39);
+            this.textEdit_address.Location = new System.Drawing.Point(560, 39);
             this.textEdit_address.Name = "textEdit_address";
             this.textEdit_address.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.textEdit_address.Size = new System.Drawing.Size(219, 20);
@@ -247,7 +217,7 @@
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.Appearance.Options.UseForeColor = true;
             this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(125, 201);
+            this.simpleButton4.Location = new System.Drawing.Point(504, 200);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(144, 42);
             this.simpleButton4.TabIndex = 7;
@@ -256,13 +226,43 @@
             // 
             // textEdit_mobile
             // 
-            this.textEdit_mobile.Location = new System.Drawing.Point(455, 133);
+            this.textEdit_mobile.Location = new System.Drawing.Point(187, 133);
             this.textEdit_mobile.Name = "textEdit_mobile";
             this.textEdit_mobile.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.textEdit_mobile.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             this.textEdit_mobile.Properties.MaskSettings.Set("mask", "d");
             this.textEdit_mobile.Size = new System.Drawing.Size(219, 20);
-            this.textEdit_mobile.TabIndex = 8;
+            this.textEdit_mobile.TabIndex = 12;
+            // 
+            // textEdit_name
+            // 
+            this.textEdit_name.Location = new System.Drawing.Point(187, 39);
+            this.textEdit_name.Name = "textEdit_name";
+            this.textEdit_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit_name.Size = new System.Drawing.Size(219, 20);
+            this.textEdit_name.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(87, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "الاسم";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(87, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "رقم الموبيل";
             // 
             // Form_Customer
             // 
@@ -274,30 +274,30 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 571);
             this.Controls.Add(this.textEdit_mobile);
+            this.Controls.Add(this.textEdit_name);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.textEdit_address);
-            this.Controls.Add(this.textEdit_name);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.notes_richtext);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
-            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("Form_Customer.IconOptions.Image")));
             this.LookAndFeel.SkinName = "Office 2016 Colorful";
             this.LookAndFeel.TouchUIMode = DevExpress.Utils.DefaultBoolean.False;
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Form_Customer";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "    صفحة العملاء";
             this.Load += new System.EventHandler(this.Customer_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit_name.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_address.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit_mobile.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit_name.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,8 +307,6 @@
         private System.Windows.Forms.RichTextBox notes_richtext;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
@@ -318,9 +316,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn Notes;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.TextEdit textEdit_name;
         private DevExpress.XtraEditors.TextEdit textEdit_address;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.TextEdit textEdit_mobile;
+        private DevExpress.XtraEditors.TextEdit textEdit_name;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

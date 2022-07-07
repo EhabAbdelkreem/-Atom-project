@@ -117,20 +117,21 @@ namespace TomProject
                 G.SaveChanges();
                 GG.SaveChanges();
                 GGG.SaveChanges();
-                MessageBox.Show("تم ادخال بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Added Successfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridfillview();
                 clearfiels();
             }
             else
             {
-                MessageBox.Show("يرجى ادخال كافة الحقول", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Complete Data", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
 
+        #region Calculate Rest
         private void txttotal_EditValueChanged(object sender, EventArgs e)
         {
-           // txtrest.Text = (float.Parse(txttotal.Text) - float.Parse(txtpaid.Text)).ToString();
+            txtrest.Text = (float.Parse(txttotal.Text) - float.Parse(txtpaid.Text)).ToString();
 
         }
 
@@ -141,15 +142,16 @@ namespace TomProject
 
         private void txtpaid_EditValueChanged(object sender, EventArgs e)
         {
-            //txtrest.Text = (float.Parse(txttotal.Text) - float.Parse(txtpaid.Text)).ToString();
+            txtrest.Text = (float.Parse(txttotal.Text) - float.Parse(txtpaid.Text)).ToString();
 
         }
 
         private void txtprice_EditValueChanged(object sender, EventArgs e)
         {
-           // txttotal.Text = (float.Parse(txtquan.Text) * float.Parse(txtprice.Text)).ToString();
+            // txttotal.Text = (float.Parse(txtquan.Text) * float.Parse(txtprice.Text)).ToString();
         }
 
+        #endregion
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             if (txtnoat.Text != "" && txtpaid.Text != "" && txtprice.Text != "" && txtquan.Text != "" && txtrest.Text != "" && txttotal.Text != "")
@@ -189,13 +191,13 @@ namespace TomProject
                 G.SaveChanges();
                 GG.SaveChanges();
                 GGG.SaveChanges();
-                MessageBox.Show("تم تعديل بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Updated Succesfult", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 gridfillview();
                 clearfiels();
             }
             else
             {
-                MessageBox.Show("يرجى ادخال كافة الحقول", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Select Row", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -260,11 +262,11 @@ namespace TomProject
                     Garlic GG = new Garlic();
                     GG.Entry(FR).State = System.Data.Entity.EntityState.Deleted;
                     
-                    if (MessageBox.Show("يرجى التاكد من حذف البيانات", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                    if (MessageBox.Show("Are You Sure Delete Row", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                     {
                         G.SaveChanges();
                         GG.SaveChanges();
-                        MessageBox.Show("تم حذف البيانات بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Deleted Successfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clearfiels();
                         gridfillview();
 
@@ -278,13 +280,13 @@ namespace TomProject
                 }
                 else
                 {
-                    MessageBox.Show("يرجى اختيار الحقل لحذفه", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please Select Row", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
         }
             catch
             {
-                MessageBox.Show("يرجى حذف جميع العنصر المرتبطه بهه التعبئة فى السجلات الاخرى اولا", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please Delete All Related Data First", "Warrning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
 }

@@ -598,7 +598,6 @@ D:\tomproject\TomProject\obj\Debug\TomProject.Form_RawRecipets.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.PL.Form_Supplier.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.Form_Wallet.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.PL.WalletItem.resources
-D:\tomproject\TomProject\obj\Debug\TomProject.ExportRecipts_Form.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.Migrations.Intial.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.PL.Form_YeildReceiptcs.resources
 D:\tomproject\TomProject\obj\Debug\TomProject.Properties.Resources.resources
@@ -881,3 +880,25 @@ F:\ITI\Desktop Project\FinalProject\tomproject\TomProject\obj\Debug\TomProject.c
 F:\ITI\Desktop Project\FinalProject\tomproject\TomProject\obj\Debug\TomProject.csproj.CopyComplete
 F:\ITI\Desktop Project\FinalProject\tomproject\TomProject\obj\Debug\TomProject.exe
 F:\ITI\Desktop Project\FinalProject\tomproject\TomProject\obj\Debug\TomProject.pdb
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.Shared.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\tomproject\TomProject\bin\Debug\Guna.UI2.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\tomproject\TomProject\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\tomproject\TomProject\bin\Debug\stdole.dll
+D:\tomproject\TomProject\obj\Debug\TomProject.PL.Form_Login.resources
+D:\tomproject\TomProject\obj\Debug\TomProject.form_Users.resources
+D:\tomproject\TomProject\obj\Debug\TomProject.Reporting.RepoertChoose.resources
+D:\tomproject\TomProject\obj\Debug\TomProject.Reporting.ShowReport.resources

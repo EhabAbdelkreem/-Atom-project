@@ -117,8 +117,7 @@ namespace TomProject
 
         private void main_form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Form_Login frm = new Form_Login();
-            frm.Close();
+            Application.Exit();
         }
 
         private void btnusers_ItemClick(object sender, ItemClickEventArgs e)

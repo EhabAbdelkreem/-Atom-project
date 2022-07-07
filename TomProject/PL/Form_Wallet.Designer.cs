@@ -64,7 +64,7 @@
             this.simpleButton3.Appearance.Options.UseFont = true;
             this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(439, 146);
+            this.simpleButton3.Location = new System.Drawing.Point(251, 146);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -81,7 +81,7 @@
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(257, 146);
+            this.simpleButton2.Location = new System.Drawing.Point(442, 146);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -98,7 +98,7 @@
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(628, 146);
+            this.simpleButton1.Location = new System.Drawing.Point(82, 146);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -254,7 +254,7 @@
             this.simpleButton4.Appearance.Options.UseFont = true;
             this.simpleButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(82, 146);
+            this.simpleButton4.Location = new System.Drawing.Point(625, 146);
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

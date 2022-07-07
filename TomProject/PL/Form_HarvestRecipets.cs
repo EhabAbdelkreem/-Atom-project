@@ -42,11 +42,11 @@ namespace TomProject
             txtid.Text = "";
             txtnoat.Text = "";
             txtnumberofunit.Text = "";
-            txtpaid.Text = "";
+            txtpaid.Text = "0";
             txtpeice.Text = "";
             txtquantity.Text = "";
-            txtrest.Text = "";
-            txttotalprice.Text = "";
+            txtrest.Text = "0";
+            txttotalprice.Text = "0";
             txttotalweight.Text = "";
             txtunitweight.Text = "";
             cmb.Text = "";
@@ -97,7 +97,7 @@ namespace TomProject
             if (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]) != null)
             {
                 txtid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[0]).ToString();
-                lookUpEdit1.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
+                lookUpEdit1.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[1]).ToString();
                 cmbquantity.EditValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[2].FieldName).ToString();
                 date.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[3]).ToString();
                 cmb.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[4]).ToString();
@@ -111,7 +111,6 @@ namespace TomProject
                 txtpaid.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[12]).ToString();
                 txtrest.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[13]).ToString();
                 txtnoat.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, gridView1.Columns[14]).ToString();
-            
             }
             
 
@@ -120,7 +119,7 @@ namespace TomProject
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             G = new Garlic();
-            if (txtnoat.Text != "" && txtnumberofunit.Text != "" && txtpaid.Text != "" && txtpeice.Text != "" && txtquantity.Text != "" && txtrest.Text != "" && txttotalprice.Text != "" && txttotalweight.Text != "" && txtunitweight.Text != "")
+            if ( txtnumberofunit.Text != "" && txtpaid.Text != "" && txtpeice.Text != "" && txtquantity.Text != "" && txtrest.Text != "" && txttotalprice.Text != "" && txttotalweight.Text != "" && txtunitweight.Text != "")
             {
                 int totalfil = 0;
                 decimal acount = 0;
@@ -137,17 +136,17 @@ namespace TomProject
                     HR.FillItem = G.FillItems.FirstOrDefault(ee => ee.ID == fillID);
                     HR.Notes = txtnoat.Text;
                     HR.NumberOfUnit = int.Parse(txtnumberofunit.Text);
-                    HR.Paid = int.Parse(txtpaid.Text);
-                    HR.Price = int.Parse(txtpeice.Text);
-                    HR.Remaining = int.Parse(txtrest.Text);
-                    HR.Total = int.Parse(txttotalprice.Text);
-                    HR.UnitWeight = int.Parse(txtunitweight.Text);
-                    HR.TotalWeight = int.Parse(txttotalweight.Text);
+                    HR.Paid = decimal.Parse(txtpaid.Text);
+                    HR.Price = decimal.Parse(txtpeice.Text);
+                    HR.Remaining = decimal.Parse(txtrest.Text);
+                    HR.Total = decimal.Parse(txttotalprice.Text);
+                    HR.UnitWeight = float.Parse(txtunitweight.Text);
+                    HR.TotalWeight = float.Parse(txttotalweight.Text);
                     HR.Type = cmbquantity.Text;
                     HR.Size = int.Parse(cmb.Text);
                     G.harvestedRecipets.Add(HR);
                     totalfil = fillitemInfac.Quantity - int.Parse(txtquantity.Text);
-                    acount = suplier.account + int.Parse(txtrest.Text);
+                    acount = suplier.account + decimal.Parse(txtrest.Text);
                     Supplier s = new Supplier { ID = suplier.ID, Name = suplier.Name, Type = suplier.Type, Phone = suplier.Phone, Address = suplier.Address, account = acount, Notes = suplier.Notes };
                     FillItem FI = new FillItem { ID = fillitemInfac.ID, Name = fillitemInfac.Name, Quantity = totalfil };
                     Garlic GG = new Garlic();
@@ -158,7 +157,7 @@ namespace TomProject
                     GG.SaveChanges();
                     GGG.SaveChanges();
 
-                    MessageBox.Show("تم ادخال بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Added Succuessfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     gridfillview();
                     clearFields();
@@ -171,14 +170,14 @@ namespace TomProject
             }
             else
             {
-                MessageBox.Show("يرجى ادخال كافة الحقول", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Complete Data", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             G = new Garlic();
-            if (txtnoat.Text != "" && txtnumberofunit.Text != "" && txtpaid.Text != "" && txtpeice.Text != "" && txtquantity.Text != "" && txtrest.Text != "" && txttotalprice.Text != "" && txttotalweight.Text != "" && txtunitweight.Text != "")
+            if ( txtnumberofunit.Text != "" && txtpaid.Text != "" && txtpeice.Text != "" && txtquantity.Text != "" && txtrest.Text != "" && txttotalprice.Text != "" && txttotalweight.Text != "" && txtunitweight.Text != "")
             {
                 int oldquantity = 0;
                 decimal oldremain = 0;
@@ -187,13 +186,14 @@ namespace TomProject
                 var supplierID = int.Parse(lookUpEdit1.EditValue.ToString());
                 var fillID = int.Parse(lookUpEdit2.EditValue.ToString());
                 var harvestid = int.Parse(txtid.Text);
-                var fillitemInfac = G.FillItems.Where(ww => ww.ID == fillID).Select(ww => new { ww.Name, ww.Quantity }).FirstOrDefault();
-                if (fillitemInfac.Quantity >= int.Parse(txtquantity.Text))
-                {
-                    var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new { ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
+                var suplier = G.Suppliers.Where(ww => ww.ID == supplierID).Select(ww => new { ww.Name, ww.Type, ww.Phone, ww.Address, ww.account, ww.Notes }).FirstOrDefault();
                 var harvest = G.harvestedRecipets.Where(ww => ww.ID == harvestid).Select(ww => new { ww.Date, ww.FillItem, ww.FillQuantity, ww.Notes, ww.NumberOfUnit, ww.Paid, ww.Price, ww.Remaining, ww.Size, ww.Supplier, ww.Total, ww.TotalWeight, ww.Type, ww.UnitWeight }).FirstOrDefault();
                 oldremain = decimal.Parse(harvest.Remaining.ToString());
                 oldquantity = harvest.FillQuantity;
+                var fillitemInfac = G.FillItems.Where(ww => ww.ID == fillID).Select(ww => new { ww.Name, ww.Quantity }).FirstOrDefault();
+                if ((fillitemInfac.Quantity+oldquantity) >= int.Parse(txtquantity.Text))
+                {
+                   
                 harvestedRecipet HR = new harvestedRecipet();
                 HR.ID = harvestid;
                 HR.Supplier = G.Suppliers.FirstOrDefault(ww => ww.ID == supplierID);
@@ -224,7 +224,7 @@ namespace TomProject
                 G.SaveChanges();
                 GG.SaveChanges();
                 GGG.SaveChanges();
-                MessageBox.Show("تم تعديل بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Updated Succuessfuly ", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 gridfillview();
                 clearFields();
@@ -237,7 +237,7 @@ namespace TomProject
         }
             else
             {
-                MessageBox.Show("يرجى اختيار الحقل", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Select Row", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -285,12 +285,12 @@ namespace TomProject
                 G.Entry(s).State = System.Data.Entity.EntityState.Modified;
                 GG.Entry(FI).State = System.Data.Entity.EntityState.Modified;
                 GGG.Entry(HR).State = System.Data.Entity.EntityState.Deleted;
-                if (MessageBox.Show("يرجى التاكد من حذف البيانات", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (MessageBox.Show("Are You Sure to Delete Row", "Warrning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     G.SaveChanges();
                     GG.SaveChanges();
                     GGG.SaveChanges();
-                    MessageBox.Show("تم حذف بيانات الفاتوره بنجاح", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Deleted Successfuly", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     gridfillview();
                     clearFields();
                 }
@@ -302,7 +302,7 @@ namespace TomProject
             }
             else
             {
-                MessageBox.Show("يرجى اختيار الحقل", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please Slecet Row", "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -325,5 +325,16 @@ namespace TomProject
         {
         }
 
+        private void txttotalprice_TextChanged(object sender, EventArgs e)
+        {
+
+            txtrest.Text = (decimal.Parse(txttotalprice.Text) - decimal.Parse(txtpaid.Text)).ToString();
+        }
+
+        private void txtpaid_TextChanged(object sender, EventArgs e)
+        {
+            txtrest.Text = (decimal.Parse(txttotalprice.Text) - decimal.Parse(txtpaid.Text)).ToString();
+
+        }
     }
 }

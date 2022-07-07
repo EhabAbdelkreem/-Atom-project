@@ -354,6 +354,8 @@
             // 
             // txtrest
             // 
+            this.txtrest.EditValue = "0";
+            this.txtrest.Enabled = false;
             this.txtrest.Location = new System.Drawing.Point(937, 270);
             this.txtrest.Margin = new System.Windows.Forms.Padding(4);
             this.txtrest.Name = "txtrest";
@@ -364,6 +366,7 @@
             // 
             // txtpaid
             // 
+            this.txtpaid.EditValue = "0";
             this.txtpaid.Location = new System.Drawing.Point(781, 270);
             this.txtpaid.Margin = new System.Windows.Forms.Padding(4);
             this.txtpaid.Name = "txtpaid";
@@ -371,9 +374,11 @@
             this.txtpaid.Properties.MaskSettings.Set("mask", "f");
             this.txtpaid.Size = new System.Drawing.Size(73, 20);
             this.txtpaid.TabIndex = 98;
+            this.txtpaid.TextChanged += new System.EventHandler(this.txtpaid_TextChanged);
             // 
             // txttotalprice
             // 
+            this.txttotalprice.EditValue = "0";
             this.txttotalprice.Location = new System.Drawing.Point(600, 270);
             this.txttotalprice.Margin = new System.Windows.Forms.Padding(4);
             this.txttotalprice.Name = "txttotalprice";
@@ -381,6 +386,7 @@
             this.txttotalprice.Properties.MaskSettings.Set("mask", "f");
             this.txttotalprice.Size = new System.Drawing.Size(78, 20);
             this.txttotalprice.TabIndex = 97;
+            this.txttotalprice.TextChanged += new System.EventHandler(this.txttotalprice_TextChanged);
             // 
             // txtpeice
             // 

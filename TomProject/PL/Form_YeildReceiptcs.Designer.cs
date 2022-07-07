@@ -561,7 +561,7 @@
             this.Name = "Form_YeildReceiptcs";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "YeildReceiptcs";
+            this.Text = "فاتوره وارد ارض";
             this.Load += new System.EventHandler(this.YeildReceiptcs_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);
             this.fluentDesignFormContainer1.PerformLayout();

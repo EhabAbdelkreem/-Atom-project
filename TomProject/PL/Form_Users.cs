@@ -143,10 +143,6 @@ namespace TomProject
             }
         }
 
-        private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
@@ -219,6 +215,36 @@ namespace TomProject
                 XtraMessageBox.Show("Please Complete Data ", "Warnning", MessageBoxButtons.OK);
 
             }
+        }
+
+        private void form_Users_Load(object sender, EventArgs e)
+        {
+            #region fillGridcontrol
+            gridControl1.DataSource = db.Users.Select(r => new { r.ID, sName = r.UserName, r.Password, r.Type }).ToList();
+            #endregion
+
+        }
+
+        private void admin_Click_1(object sender, EventArgs e)
+        {
+            #region fillGridcontrol
+            gridControl1.DataSource = db.Users.Select(r => new { r.ID, sName = r.UserName, r.Password, r.Type }).Where(w=>w.Type=="صاحب العمل").ToList();
+            #endregion
+        }
+
+        private void employee_Click_1(object sender, EventArgs e)
+        {
+            #region fillGridcontrol
+            gridControl1.DataSource = db.Users.Select(r => new { r.ID, sName = r.UserName, r.Password, r.Type }).Where(w => w.Type == "موظف").ToList();
+            #endregion
+
+        }
+
+        private void manger_Click_1(object sender, EventArgs e)
+        {
+            #region fillGridcontrol
+            gridControl1.DataSource = db.Users.Select(r => new { r.ID, sName = r.UserName, r.Password, r.Type }).Where(w => w.Type == "مدير").ToList();
+            #endregion
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace TomProject
 
             #region Supplierlookupedit
             var Items = db.WalletItems.Select(a => new { a.ID, a.Name }).ToList();
-            LueItem.Text = db.WalletItems.Select(a => a.Name).FirstOrDefault();//to select first elment in form load
+            LueItem.EditValue = db.WalletItems.Select(a => a.ID).FirstOrDefault();//to select first elment in form load
             LueItem.Properties.DataSource = Items;
             LueItem.Properties.DisplayMember = "Name";
             LueItem.Properties.ValueMember = "ID";
@@ -98,7 +99,7 @@ namespace TomProject
                 #region update object
 
 
-                db.Entry(NewWallet).State = System.Data.Entity.EntityState.Modified;
+                db.Wallets.AddOrUpdate(NewWallet);
                 db.SaveChanges();
 
                 #endregion

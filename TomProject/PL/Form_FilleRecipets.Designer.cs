@@ -126,7 +126,7 @@ namespace TomProject
             this.txtpaid.Properties.MaskSettings.Set("mask", "n");
             this.txtpaid.Size = new System.Drawing.Size(61, 20);
             this.txtpaid.TabIndex = 81;
-            this.txtpaid.EditValueChanged += new System.EventHandler(this.txtpaid_EditValueChanged);
+            this.txtpaid.TextChanged += new System.EventHandler(this.txtpaid_EditValueChanged);
             // 
             // txttotal
             // 
@@ -138,7 +138,7 @@ namespace TomProject
             this.txttotal.Properties.MaskSettings.Set("mask", "n");
             this.txttotal.Size = new System.Drawing.Size(61, 20);
             this.txttotal.TabIndex = 80;
-            this.txttotal.EditValueChanged += new System.EventHandler(this.txttotal_EditValueChanged);
+            this.txttotal.TextChanged += new System.EventHandler(this.txttotal_EditValueChanged);
             // 
             // gridControl1
             // 

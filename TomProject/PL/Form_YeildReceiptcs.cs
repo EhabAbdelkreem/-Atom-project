@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -129,7 +130,7 @@ namespace TomProject.PL
                 newreceipt.Supplier.account += newreceipt.Remaining-Old_Reminaing;
                 #endregion
 
-                db.Entry(newreceipt).State = System.Data.Entity.EntityState.Modified;
+                db.YeildRecipts.AddOrUpdate(newreceipt);
                 db.SaveChanges();
 
                 #endregion

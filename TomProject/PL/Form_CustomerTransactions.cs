@@ -50,12 +50,8 @@ namespace TomProject.PL
             ///hide ID From lookupedit
             LueItem.Properties.PopulateColumns();
             LueItem.Properties.Columns[0].Visible = false;
-            //for supplier account
-            var Customeracc = db.Customers.FirstOrDefault(d => d.ID == (int)LueItem.EditValue);
-            txtAccount.Text = Customeracc.account.ToString();
             #endregion
-
-
+            //for supplier account
             #region gridControl1
             fillgrid();
             #endregion

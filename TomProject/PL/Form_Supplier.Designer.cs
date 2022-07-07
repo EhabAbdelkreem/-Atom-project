@@ -348,7 +348,7 @@
             this.Name = "Form_Supplier";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
-            this.Text = "Form_Supplier";
+            this.Text = "الموردين";
             this.Load += new System.EventHandler(this.Form_Supplier_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.TxtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txtphone.Properties)).EndInit();
