@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
-
+using TomProject.Permission;
 
 namespace TomProject
 {
@@ -27,6 +27,10 @@ namespace TomProject
 
         private void Form_RawRecipets_Load(object sender, EventArgs e)
         {
+            if (LoginInfo.UserRole == "موظف")
+            {
+                btnDelete.Enabled = false;
+            }
             #region Supplierlookupedit
             var supplier = db.Suppliers.Select(ee => new { ID = ee.ID, Name = ee.Name }).ToList();
 

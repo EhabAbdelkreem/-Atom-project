@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TomProject.Permission;
 using TomProject.PL;
 using TomProject.Reporting;
 
@@ -40,7 +41,11 @@ namespace TomProject
 
         private void main_form_Load(object sender, EventArgs e)
         {
-
+            if(LoginInfo.UserRole=="موظف"||LoginInfo.UserRole=="مدير")
+            {
+                barButtonItem17.Enabled = false;
+                btnusers.Enabled = false;
+            }
         }
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)

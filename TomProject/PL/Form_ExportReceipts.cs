@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
+using TomProject.Permission;
 
 namespace TomProject.PL
 {
@@ -79,6 +80,10 @@ namespace TomProject.PL
         #endregion
         private void Form_ExportReceipts_Load(object sender, EventArgs e)
         {
+            if (LoginInfo.UserRole == "موظف")
+            {
+                simpleButton3.Enabled = false;
+            }
             Customerfil();
             t3bafil();
             gridfillview();

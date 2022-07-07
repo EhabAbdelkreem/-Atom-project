@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
+using TomProject.Permission;
 
 namespace TomProject
 {
@@ -23,6 +24,10 @@ namespace TomProject
         #region FormLoad
         private void Wallet_Load(object sender, EventArgs e)
         {
+            if (LoginInfo.UserRole == "موظف")
+            {
+                simpleButton2.Enabled = false;
+            }
 
             #region Supplierlookupedit
             var Items = db.WalletItems.Select(a => new { a.ID, a.Name }).ToList();
