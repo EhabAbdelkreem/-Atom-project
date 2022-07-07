@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TomProject.Context;
+using TomProject.Permission;
 
 namespace TomProject.PL
 {
@@ -39,7 +40,8 @@ namespace TomProject.PL
             if (txtUsername.Text != string.Empty  && txtUserpass.Text != string.Empty)
             {
                 var user = db.Users.Where(a => a.UserName.Equals(txtUsername.Text)).FirstOrDefault();
-                if(user != null)
+                LoginInfo.UserRole = db.Users.Where(a => a.UserName.Equals(txtUsername.Text)).Select(ww=>ww.Type).FirstOrDefault();
+                if (user != null)
                 {
                     if (user.Password.Equals(txtUserpass.Text))
                     {

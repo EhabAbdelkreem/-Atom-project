@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
+using TomProject.Permission;
 
 namespace TomProject.PL
 {
@@ -25,6 +26,11 @@ namespace TomProject.PL
         #region FormLoad
         private void WalletItem_Load(object sender, EventArgs e)
         {
+            if (LoginInfo.UserRole == "موظف")
+            {
+                simpleButton2.Enabled = false;
+            }
+
             #region fillGridcontrol
             gridControl1.DataSource = db.WalletItems.Select(r => new { r.ID, r.Name }).ToList();
             #endregion

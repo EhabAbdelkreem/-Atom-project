@@ -108,6 +108,7 @@
     <Compile Include="Entities\Wallet.cs" />
     <Compile Include="Entities\WalletItem.cs" />
     <Compile Include="Entities\YeildRecipt.cs" />
+    <Compile Include="Permission\LoginInfo.cs" />
     <Compile Include="PL\Form_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
