@@ -243,8 +243,13 @@ namespace TomProject.PL
 
    
 
-        private void simpleButton4_Click(object sender, EventArgs e)
+        public void simpleButton4_Click(object sender, EventArgs e)
         {
+            #region fillGridcontrol
+            gridControl1.DataSource =
+                      db.SupplierTransactions.Select(r => new
+                      { r.ID, SName = r.Supplier.Name, r.Date, r.Notes, r.TransactionType, r.Amount, c = r.Supplier.account }).ToList();
+            #endregion
             gridControl1.ShowPrintPreview();
 
         }

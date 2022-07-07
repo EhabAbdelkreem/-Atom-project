@@ -111,8 +111,9 @@ namespace TomProject
             }
         }
 
-        private void simpleButton4_Click(object sender, EventArgs e)
+        public void simpleButton4_Click(object sender, EventArgs e)
         {
+            gridControl1.DataSource = db.Customers.ToList();
             gridControl1.ShowPrintPreview();
 
         }

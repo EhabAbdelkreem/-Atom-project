@@ -378,7 +378,7 @@
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(677, 269);
+            this.btnSave.Location = new System.Drawing.Point(155, 266);
             this.btnSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -395,7 +395,7 @@
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelete.ImageOptions.SvgImage")));
-            this.btnDelete.Location = new System.Drawing.Point(306, 269);
+            this.btnDelete.Location = new System.Drawing.Point(501, 266);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -412,7 +412,7 @@
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUpdate.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUpdate.ImageOptions.SvgImage")));
-            this.btnUpdate.Location = new System.Drawing.Point(489, 269);
+            this.btnUpdate.Location = new System.Drawing.Point(332, 266);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -429,7 +429,7 @@
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPrint.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPrint.ImageOptions.SvgImage")));
-            this.btnPrint.Location = new System.Drawing.Point(132, 269);
+            this.btnPrint.Location = new System.Drawing.Point(667, 266);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

@@ -301,8 +301,9 @@ namespace TomProject
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        public void simpleButton1_Click(object sender, EventArgs e)
         {
+            gridfillview();
             gridControl1.ShowPrintPreview();
 
         }

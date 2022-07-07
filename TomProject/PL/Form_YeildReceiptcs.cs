@@ -178,8 +178,12 @@ namespace TomProject.PL
         #endregion
 
         #region Printing
-        private void simpleButton4_Click_1(object sender, EventArgs e)
+        public void simpleButton4_Click_1(object sender, EventArgs e)
         {
+            #region fillGridcontrol
+            gridControl1.DataSource = db.YeildRecipts.Select(r => new { r.ID, SName = r.Supplier.Name, Fdan = r.AcrePrice, r.CaratPrice, r.Paid, r.Total, r.Remaining, r.Date, r.Notes, r.Price }).ToList();
+            #endregion
+
             gridControl1.ShowPrintPreview();
 
         }
@@ -249,5 +253,9 @@ namespace TomProject.PL
 
         #endregion
 
+        private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

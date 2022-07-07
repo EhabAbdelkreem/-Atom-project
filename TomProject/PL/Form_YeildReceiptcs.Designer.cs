@@ -220,6 +220,7 @@
             this.fluentDesignFormContainer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1026, 641);
             this.fluentDesignFormContainer1.TabIndex = 1;
+            this.fluentDesignFormContainer1.Click += new System.EventHandler(this.fluentDesignFormContainer1_Click);
             // 
             // textEdit2
             // 

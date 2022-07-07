@@ -39,14 +39,20 @@ namespace TomProject.PL
             if (txtUsername.Text != string.Empty  && txtUserpass.Text != string.Empty)
             {
                 var user = db.Users.Where(a => a.UserName.Equals(txtUsername.Text)).FirstOrDefault();
-
-
                 if(user != null)
                 {
-                    if(user.Password.Equals(txtUserpass.Text))
+                    if (user.Password.Equals(txtUserpass.Text))
                     {
+                       
                         main_form main = new main_form();
-                        main.Show();
+                        this.Hide();
+                        main.ShowDialog();
+
+                        if (user.Type == "manger") 
+                        {
+                            form_Users form = new form_Users();
+                            //form.simpleButton1.Visible = false;
+                        };
                     }else
                     {
                         MessageBox.Show("the password not corrct");

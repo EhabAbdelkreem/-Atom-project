@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using TomProject.PL;
+using TomProject.Reporting;
 
 namespace TomProject
 {
@@ -19,7 +20,7 @@ namespace TomProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_ExportReceipts());
+            Application.Run(new Form_Login());
         }
     }
 }

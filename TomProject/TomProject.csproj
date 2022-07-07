@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v22.1" />
     <Reference Include="DevExpress.Data.Desktop.v22.1" />
     <Reference Include="DevExpress.Data.v22.1" />
@@ -57,9 +61,14 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\Garlic.cs" />
+    <Compile Include="CustomSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entities\User.cs" />
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
@@ -133,7 +147,7 @@
     <Compile Include="PL\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Form_Login.Designer.cs">
+    <Compile Include="PL\Form_Login.designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Form_SupplierTransactions.cs">
@@ -166,12 +180,6 @@
     <Compile Include="PL\Form_WalletItem.Designer.cs">
       <DependentUpon>Form_WalletItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\2Form_ExportRecipts_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\2Form_ExportRecipts_Form.Designer.cs">
-      <DependentUpon>2Form_ExportRecipts_Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202206282006280_Intial.cs" />
     <Compile Include="Migrations\202206282006280_Intial.designer.cs">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
@@ -183,12 +191,6 @@
     <Compile Include="PL\Form_YeildReceiptcs.Designer.cs">
       <DependentUpon>Form_YeildReceiptcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Fomr_Reports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Fomr_Reports.Designer.cs">
-      <DependentUpon>Fomr_Reports.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PL\Form_Wallet.cs">
@@ -196,6 +198,36 @@
     </Compile>
     <Compile Include="PL\Form_Wallet.Designer.cs">
       <DependentUpon>Form_Wallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\MainReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\RepoertChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\RepoertChoose.designer.cs">
+      <DependentUpon>RepoertChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\ReportFillItem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportFillItem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\ReportWallet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportWallet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporting\ShowReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporting\ShowReport.designer.cs">
+      <DependentUpon>ShowReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>
@@ -221,6 +253,9 @@
     <EmbeddedResource Include="PL\Form_HarvestRecipets.resx">
       <DependentUpon>Form_HarvestRecipets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Form_SupplierTransactions.resx">
       <DependentUpon>Form_SupplierTransactions.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,14 +265,14 @@
     <EmbeddedResource Include="PL\Form_Supplier.resx">
       <DependentUpon>Form_Supplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\form_Users.resx">
+      <DependentUpon>Form_Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Form_Wallet.resx">
       <DependentUpon>Form_Wallet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Form_WalletItem.resx">
       <DependentUpon>Form_WalletItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\2Form_ExportRecipts_Form.resx">
-      <DependentUpon>2Form_ExportRecipts_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206282006280_Intial.resx">
       <DependentUpon>202206282006280_Intial.cs</DependentUpon>
@@ -255,7 +290,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reporting\MainReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MainReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\RepoertChoose.resx">
+      <DependentUpon>RepoertChoose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportFillItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportFillItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ReportWallet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportWallet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporting\ShowReport.resx">
+      <DependentUpon>ShowReport.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="CustomSet1.xsc">
+      <DependentUpon>CustomSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CustomSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomSet11.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CustomSet1.xss">
+      <DependentUpon>CustomSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -267,7 +331,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

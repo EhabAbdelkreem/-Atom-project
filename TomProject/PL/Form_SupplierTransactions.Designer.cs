@@ -160,12 +160,12 @@
             this.notes.MinWidth = 21;
             this.notes.Name = "notes";
             this.notes.Visible = true;
-            this.notes.VisibleIndex = 4;
+            this.notes.VisibleIndex = 5;
             this.notes.Width = 81;
             // 
             // Amount
             // 
-            this.Amount.Caption = "الكمية";
+            this.Amount.Caption = "المبلغ";
             this.Amount.FieldName = "Amount";
             this.Amount.MinWidth = 21;
             this.Amount.Name = "Amount";
@@ -180,7 +180,7 @@
             this.TransactionType.MinWidth = 21;
             this.TransactionType.Name = "TransactionType";
             this.TransactionType.Visible = true;
-            this.TransactionType.VisibleIndex = 5;
+            this.TransactionType.VisibleIndex = 4;
             this.TransactionType.Width = 81;
             // 
             // txtamount

@@ -174,8 +174,9 @@ namespace TomProject
 
 
         #region Printing
-        private void simpleButton4_Click(object sender, EventArgs e)
+        public void simpleButton4_Click(object sender, EventArgs e)
         {
+            fillgird();
             gridControl1.ShowPrintPreview();
         }
         #endregion

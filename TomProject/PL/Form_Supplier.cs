@@ -159,8 +159,10 @@ namespace TomProject.PL
 
 
         #region print
-        private void simpleButton3_Click(object sender, EventArgs e)
+        public void simpleButton3_Click(object sender, EventArgs e)
         {
+            gridControl1.DataSource =
+             db.Suppliers.Select(em => new { sName = em.Name, em.ID, em.Phone, em.Type, em.Notes, em.Address }).ToList();
             gridControl1.ShowPrintPreview();
 
         }
