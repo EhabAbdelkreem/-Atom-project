@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TomProject.Context;
 using TomProject.Entities;
 using System.Data.Entity;
+using TomProject.Permission;
 
 namespace TomProject
 {
@@ -64,6 +65,10 @@ namespace TomProject
 
         private void formFollitem_Load(object sender, EventArgs e)
         {
+            if (LoginInfo.UserRole == "موظف")
+            {
+                simpleButton3.Enabled = false;
+            }
             gridfillview();
         }
 
